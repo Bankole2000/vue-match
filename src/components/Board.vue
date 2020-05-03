@@ -20,7 +20,8 @@
 
     <v-img
       class="white--text align-end card"
-      height="200px"
+      contain
+      aspect-ratio="1"
       v-if="flipped[i]"
       :src="card.img"
       ref="img"
@@ -31,7 +32,6 @@
     </v-img>
     <v-img
       class="white--text align-end card"
-      height="200px"
       v-if="!flipped[i]"
       :src="game.default[i].img"
       ref="img"
@@ -155,6 +155,8 @@ export default {
 .board .grid {
   display: grid;
   gap: 0;
+  max-width: 600px;
+  max-height: 600px;
   grid-template-columns: repeat(4, 1fr);
 
   transform-style: preserve-3d;
