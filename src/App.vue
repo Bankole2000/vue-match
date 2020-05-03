@@ -5,55 +5,43 @@
 
       light
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+    <v-toolbar-title class="text-uppercase grey--text text--lighten-3">
+        <span class="font-weight-thin secondary--text">Match</span>
+        <span class="primary--text font-regular">Maker</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
 
       <v-spacer></v-spacer>
 
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        href="https://github.com/bankole2000/vue-match"
         target="_blank"
         text
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        <span class="mr-2">Star On Github</span>
+        <v-icon>mdi-github</v-icon>
       </v-btn>
     </v-app-bar>
 
     <v-content>
       <Board />
-      <HelloWorld/>
+
     </v-content>
+    <Footer />
   </v-app>
 </template>
 
 <script>
 import Board from '@/components/Board.vue';
-import HelloWorld from './components/HelloWorld.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
     Board,
+    Footer,
   },
 
   data: () => ({

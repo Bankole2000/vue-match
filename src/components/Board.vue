@@ -1,62 +1,136 @@
 <template>
 <div class="page">
 
-  <p>{{ cardsWon.length }}</p>
-  <Snackbar :snackbar='snackbar.snackbar' :text='snackbar.text' :sclass='snackbar.sclass'
+  <v-content style="padding-top: 0px; width: 80vw; margin: auto;">
+    <v-container>
+      <v-layout class="d-flex justify-center">
+        <h1
+        class="display-2 grey--text text--darken-3 mt-4 ml-4 font-weight-thin">
+        Score: {{ cardsWon.length }}
+        </h1>
+      </v-layout>
+      <v-container>
+      <v-row>
+        <v-col class="d-flex justify-center mx-auto py-0" cols="11" sm="11">
+          <v-select
+            :items="themes"
+            label="Select Game Theme"
+            v-model="theme"
+            solo
+            @change="startNewGame"
+          ></v-select>
+        </v-col>
+      </v-row>
+
+        <v-row v-if="gameComplete">
+        <v-col class="d-flex justify-center align-center mx-auto pt-0" cols="11" sm="11" md="6">
+          <h3>
+            <span class="success--text"><v-icon class="success--text">mdi-star-circle</v-icon>
+              You Win!
+            </span>
+            <span class="hidden-sm-and-down">
+              Congratulations
+            </span>
+           </h3>
+          <v-spacer></v-spacer>
+          <v-btn class="primary" @click="startNewGame">New Game</v-btn>
+        </v-col>
+
+      </v-row>
+      <div v-if="gameComplete" class="d-flex justify-center py-0">
+          <h3>🎮 Try Selecting a New theme 👆 </h3>
+        </div>
+      </v-container>
+    </v-container>
+    <Snackbar :snackbar='snackbar.snackbar' :text='snackbar.text' :sclass='snackbar.sclass'
       :timeout='snackbar.timeout' />
-  <div class="board">
+  </v-content>
 
-    <div class="grid">
-    <v-card
-    class="mx-auto card"
-    max-width="25vw"
-    v-for="(card, i) in game.cards"
-    :key = i
-    @click='flipCard(i, game, card)'
-
-    :data-id = i
-    :id = i
-  >
-
-    <v-img
-      class="white--text align-end card"
-      contain
-      aspect-ratio="1"
-      v-if="flipped[i]"
-      :src="card.img"
-      ref="img"
-    >
-      <v-card-title v-if="flipped[i]"
-      style="background-image: linear-gradient(to top, black, transparent);
-      font-size: .5rem;"><span
-      class="card-name">{{ card.name }}</span></v-card-title>
-    </v-img>
-    <v-img
-      class="white--text align-end card"
-      v-if="!flipped[i]"
-      :src="game.default[i].img"
-      ref="img"
-    >
-      <v-card-title v-if="!flipped[i]"></v-card-title>
-    </v-img>
-
-  </v-card>
+  <v-layout style="margin: auto;">
+    <div class="board">
+      <div class="grid">
+        <v-card
+          class="mx-auto card"
+          v-for="(card, i) in game.cards"
+          :key = i
+          @click='flipCard(i, game, card)'
+          :data-id = i
+          :id = i
+          >
+          <v-img
+            class="white--text align-end card"
+            v-if="flipped[i]"
+            :src="card.img"
+            ref="img"
+            >
+            <v-card-title v-if="flipped[i]"
+            style="background-image: linear-gradient(to top, black, transparent);"
+            class="hidden-sm-and-down"><span
+            class="card-name">{{ card.name }}</span></v-card-title>
+          </v-img>
+          <v-img
+          class="white--text align-end card"
+          v-if="!flipped[i]"
+          :src="game.default[i].img"
+          ref="img"
+            >
+            <v-card-title v-if="!flipped[i]"></v-card-title>
+          </v-img>
+        </v-card>
+      </div>
     </div>
-  </div>
+  </v-layout>
+  <Loader :loading ='loading' />
 </div>
 </template>
 
 <script>
 import Snackbar from '@/components/Snackbar.vue';
+import Loader from '@/components/Loader.vue';
 
 export default {
   name: 'Board',
   components: {
     Snackbar,
+    Loader,
   },
   data() {
     return {
       theme: 'zelda',
+      themes: [
+        {
+          text: 'Finaly Fantasy VII',
+          value: 'ffvii',
+        },
+        {
+          text: 'Game of Thrones',
+          value: 'got',
+        },
+        {
+          text: 'Super Mario',
+          value: 'mario',
+        },
+        {
+          text: 'Naruto Shippuden',
+          value: 'Naruto',
+        },
+        {
+          text: 'Pokemon',
+          value: 'pokemon',
+        },
+        {
+          text: 'Street Fighter',
+          value: 'sf',
+        },
+        {
+          text: 'StarFox',
+          value: 'starfox',
+        },
+        {
+          text: 'The Legend of Zelda',
+          value: 'zelda',
+        },
+      ],
       cardArray: [],
       cardsChosen: [],
       cardsChosenId: [],
@@ -66,6 +140,7 @@ export default {
         default: {},
         empty: {},
       },
+      gameComplete: false,
       flipped: Array(16).fill(false),
       snackbar: {
         snackbar: false,
@@ -73,9 +148,37 @@ export default {
         sclass: null,
         timeout: 1000,
       },
+      loading: false,
     };
   },
   methods: {
+    startNewGame() {
+      this.loading = true;
+      this.game = {
+        cards: [],
+        default: {},
+        empty: {},
+      };
+      this.gameComplete = false;
+      fetch(`/cards/${this.theme}.json`)
+        .then((res) => res.json())
+        .then((data) => {
+          this.game.cards.push(...data.cards, ...data.cards);
+          this.cardArray = this.game.cards;
+          this.cardArray.sort(() => 0.5 - Math.random());
+          this.game.default = data.default;
+          this.game.empty = data.empty;
+          this.imgsrc = this.game.default[0].img;
+          this.flipped = Array(16).fill(false);
+          this.cardArray = [];
+          this.cardsChosen = [];
+          this.cardsChosenId = [];
+          this.cardsWon = [];
+          setTimeout(() => {
+            this.loading = false;
+          }, 1500);
+        });
+    },
     checkForMatch(cards, ids) {
       if (cards[0] === cards[1]) {
         console.log('matched', ids);
@@ -91,6 +194,9 @@ export default {
         setTimeout(() => {
           this.snackbar.snackbar = false;
         }, this.snackbar.timeout);
+        if (this.cardsWon.length === 8) {
+          this.gameComplete = true;
+        }
         return;
       }
       console.log('not matched', ids);
@@ -132,6 +238,7 @@ export default {
     },
   },
   created() {
+    this.loading = true;
     fetch(`/cards/${this.theme}.json`)
       .then((res) => res.json())
       .then((data) => {
@@ -141,6 +248,9 @@ export default {
         this.game.default = data.default;
         this.game.empty = data.empty;
         this.imgsrc = this.game.default[0].img;
+        setTimeout(() => {
+          this.loading = false;
+        }, 1500);
       });
   },
 };
@@ -148,30 +258,31 @@ export default {
 
 <style>
 .board {
-  max-width: 800px;
   display: flex;
+  width: 90%;
   margin: auto;
 }
 
-.board .grid {
+.grid {
   display: grid;
   gap: 0;
-  max-width: 600px;
-  max-height: 600px;
   grid-template-columns: repeat(4, 1fr);
-
+  margin: auto;
   transform-style: preserve-3d;
 }
 
 .card {
   transform: rotateY(0deg) !important;
   transition: transform 0.3s;
+  width: 22vw;
   /* transform-style: preserve-3d; */
   z-index: 2;
 }
 
 .card-name {
   transform: rotateY(180deg) !important;
+  font-size: .8rem;
+  line-height: 10%;
 }
 .flipped{
   transform: rotateY(180deg) !important;
@@ -181,7 +292,13 @@ export default {
 }
 .faded {
   opacity: .3;
-  border-bottom: 1px solid green;
+  filter: grayscale(100%);
+}
+
+@media screen and (min-width: 500px) {
+  .card {
+    width: 150px;
+  }
 }
 
 </style>
