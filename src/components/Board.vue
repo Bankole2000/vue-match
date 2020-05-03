@@ -9,7 +9,7 @@
     <div class="grid">
     <v-card
     class="mx-auto card"
-    max-width="200"
+    max-width="25vw"
     v-for="(card, i) in game.cards"
     :key = i
     @click='flipCard(i, game, card)'
@@ -27,7 +27,8 @@
       ref="img"
     >
       <v-card-title v-if="flipped[i]"
-      style="background-image: linear-gradient(to top, black, transparent)"><span
+      style="background-image: linear-gradient(to top, black, transparent);
+      font-size: .5rem;"><span
       class="card-name">{{ card.name }}</span></v-card-title>
     </v-img>
     <v-img
