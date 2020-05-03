@@ -1,0 +1,89 @@
+{
+  "default": [
+    {
+      "img": "images/naruto/bg/1.png"
+    },
+    {
+      "img": "images/naruto/bg/2.png"
+    },
+    {
+      "img": "images/naruto/bg/3.png"
+    },
+    {
+      "img": "images/naruto/bg/4.png"
+    },
+    {
+      "img": "images/naruto/bg/5.png"
+    },
+    {
+      "img": "images/naruto/bg/6.png"
+    },
+    {
+      "img": "images/naruto/bg/7.png"
+    },
+    {
+      "img": "images/naruto/bg/8.png"
+    },
+    {
+      "img": "images/naruto/bg/9.png"
+    },
+    {
+      "img": "images/naruto/bg/10.png"
+    },
+    {
+      "img": "images/naruto/bg/11.png"
+    },
+    {
+      "img": "images/naruto/bg/12.png"
+    },
+    {
+      "img": "images/naruto/bg/13.png"
+    },
+    {
+      "img": "images/naruto/bg/14.png"
+    },
+    {
+      "img": "images/naruto/bg/15.png"
+    },
+    {
+      "img": "images/naruto/bg/16.png"
+    }
+  ],
+  "blank": {
+    "img": "images/blank.png"
+  },
+  "cards": [
+    {
+      "name": "Naruto",
+      "img": "images/naruto/main/1.png"
+    },
+    {
+      "name": "Sasuke",
+      "img": "images/naruto/main/2.png"
+    },
+    {
+      "name": "Sakura",
+      "img": "images/naruto/main/3.png"
+    },
+    {
+      "name": "Kakashi",
+      "img": "images/naruto/main/4.png"
+    },
+    {
+      "name": "Itachi",
+      "img": "images/naruto/main/5.png"
+    },
+    {
+      "name": "Jiraiya",
+      "img": "images/naruto/main/6.png"
+    },
+    {
+      "name": "Pain",
+      "img": "images/naruto/main/7.png"
+    },
+    {
+      "name": "The Sage of Six Paths",
+      "img": "images/naruto/main/8.png"
+    }
+  ]
+}

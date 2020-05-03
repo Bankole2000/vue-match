@@ -1,0 +1,89 @@
+{
+  "default": [
+    {
+      "img": "images/ffvii/bg/1.png"
+    },
+    {
+      "img": "images/ffvii/bg/2.png"
+    },
+    {
+      "img": "images/ffvii/bg/3.png"
+    },
+    {
+      "img": "images/ffvii/bg/4.png"
+    },
+    {
+      "img": "images/ffvii/bg/5.png"
+    },
+    {
+      "img": "images/ffvii/bg/6.png"
+    },
+    {
+      "img": "images/ffvii/bg/7.png"
+    },
+    {
+      "img": "images/ffvii/bg/8.png"
+    },
+    {
+      "img": "images/ffvii/bg/9.png"
+    },
+    {
+      "img": "images/ffvii/bg/10.png"
+    },
+    {
+      "img": "images/ffvii/bg/11.png"
+    },
+    {
+      "img": "images/ffvii/bg/12.png"
+    },
+    {
+      "img": "images/ffvii/bg/13.png"
+    },
+    {
+      "img": "images/ffvii/bg/14.png"
+    },
+    {
+      "img": "images/ffvii/bg/15.png"
+    },
+    {
+      "img": "images/ffvii/bg/16.png"
+    }
+  ],
+  "blank": {
+    "img": "images/blank.png"
+  },
+  "cards": [
+    {
+      "name": "Cloud",
+      "img": "images/ffvii/main/1.png"
+    },
+    {
+      "name": "Tifa",
+      "img": "images/ffvii/main/2.png"
+    },
+    {
+      "name": "Aerith",
+      "img": "images/ffvii/main/3.png"
+    },
+    {
+      "name": "Barret",
+      "img": "images/ffvii/main/4.png"
+    },
+    {
+      "name": "Sephiroth",
+      "img": "images/ffvii/main/5.png"
+    },
+    {
+      "name": "Vincent",
+      "img": "images/ffvii/main/6.png"
+    },
+    {
+      "name": "Zack",
+      "img": "images/ffvii/main/7.png"
+    },
+    {
+      "name": "Rufus",
+      "img": "images/ffvii/main/8.png"
+    }
+  ]
+}

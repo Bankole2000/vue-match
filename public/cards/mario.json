@@ -1,0 +1,89 @@
+{
+  "default": [
+    {
+      "img": "images/mario/bg/1.png"
+    },
+    {
+      "img": "images/mario/bg/2.png"
+    },
+    {
+      "img": "images/mario/bg/3.png"
+    },
+    {
+      "img": "images/mario/bg/4.png"
+    },
+    {
+      "img": "images/mario/bg/5.png"
+    },
+    {
+      "img": "images/mario/bg/6.png"
+    },
+    {
+      "img": "images/mario/bg/7.png"
+    },
+    {
+      "img": "images/mario/bg/8.png"
+    },
+    {
+      "img": "images/mario/bg/9.png"
+    },
+    {
+      "img": "images/mario/bg/10.png"
+    },
+    {
+      "img": "images/mario/bg/11.png"
+    },
+    {
+      "img": "images/mario/bg/12.png"
+    },
+    {
+      "img": "images/mario/bg/13.png"
+    },
+    {
+      "img": "images/mario/bg/14.png"
+    },
+    {
+      "img": "images/mario/bg/15.png"
+    },
+    {
+      "img": "images/mario/bg/16.png"
+    }
+  ],
+  "blank": {
+    "img": "images/blank.png"
+  },
+  "cards": [
+    {
+      "name": "Mario",
+      "img": "images/mario/main/1.png"
+    },
+    {
+      "name": "Luigi",
+      "img": "images/mario/main/2.png"
+    },
+    {
+      "name": "Princess",
+      "img": "images/mario/main/3.png"
+    },
+    {
+      "name": "Bowser",
+      "img": "images/mario/main/4.png"
+    },
+    {
+      "name": "Toadstool",
+      "img": "images/mario/main/5.png"
+    },
+    {
+      "name": "vincent",
+      "img": "images/mario/main/6.png"
+    },
+    {
+      "name": "1up mushroom",
+      "img": "images/mario/main/7.png"
+    },
+    {
+      "name": "Star",
+      "img": "images/mario/main/8.png"
+    }
+  ]
+}

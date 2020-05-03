@@ -1,0 +1,89 @@
+{
+  "default": [
+    {
+      "img": "images/got/bg/1.png"
+    },
+    {
+      "img": "images/got/bg/2.png"
+    },
+    {
+      "img": "images/got/bg/3.png"
+    },
+    {
+      "img": "images/got/bg/4.png"
+    },
+    {
+      "img": "images/got/bg/5.png"
+    },
+    {
+      "img": "images/got/bg/6.png"
+    },
+    {
+      "img": "images/got/bg/7.png"
+    },
+    {
+      "img": "images/got/bg/8.png"
+    },
+    {
+      "img": "images/got/bg/9.png"
+    },
+    {
+      "img": "images/got/bg/10.png"
+    },
+    {
+      "img": "images/got/bg/11.png"
+    },
+    {
+      "img": "images/got/bg/12.png"
+    },
+    {
+      "img": "images/got/bg/13.png"
+    },
+    {
+      "img": "images/got/bg/14.png"
+    },
+    {
+      "img": "images/got/bg/15.png"
+    },
+    {
+      "img": "images/got/bg/16.png"
+    }
+  ],
+  "blank": {
+    "img": "images/blank.png"
+  },
+  "cards": [
+    {
+      "name": "John Snow",
+      "img": "images/got/main/1.png"
+    },
+    {
+      "name": "Denaerys Targyrean",
+      "img": "images/got/main/2.png"
+    },
+    {
+      "name": "Arya Stark",
+      "img": "images/got/main/3.png"
+    },
+    {
+      "name": "Tyrion Lannister",
+      "img": "images/got/main/4.png"
+    },
+    {
+      "name": "Cersei Lannister",
+      "img": "images/got/main/5.png"
+    },
+    {
+      "name": "Bran Stark",
+      "img": "images/got/main/6.png"
+    },
+    {
+      "name": "Varys & Baelish",
+      "img": "images/got/main/7.png"
+    },
+    {
+      "name": "The Night King",
+      "img": "images/got/main/8.png"
+    }
+  ]
+}

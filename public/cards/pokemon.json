@@ -1,0 +1,89 @@
+{
+  "default": [
+    {
+      "img": "images/pokemon/bg/1.png"
+    },
+    {
+      "img": "images/pokemon/bg/2.png"
+    },
+    {
+      "img": "images/pokemon/bg/3.png"
+    },
+    {
+      "img": "images/pokemon/bg/4.png"
+    },
+    {
+      "img": "images/pokemon/bg/5.png"
+    },
+    {
+      "img": "images/pokemon/bg/6.png"
+    },
+    {
+      "img": "images/pokemon/bg/7.png"
+    },
+    {
+      "img": "images/pokemon/bg/8.png"
+    },
+    {
+      "img": "images/pokemon/bg/9.png"
+    },
+    {
+      "img": "images/pokemon/bg/10.png"
+    },
+    {
+      "img": "images/pokemon/bg/11.png"
+    },
+    {
+      "img": "images/pokemon/bg/12.png"
+    },
+    {
+      "img": "images/pokemon/bg/13.png"
+    },
+    {
+      "img": "images/pokemon/bg/14.png"
+    },
+    {
+      "img": "images/pokemon/bg/15.png"
+    },
+    {
+      "img": "images/pokemon/bg/16.png"
+    }
+  ],
+  "blank": {
+    "img": "images/blank.png"
+  },
+  "cards": [
+    {
+      "name": "Pikachu",
+      "img": "images/pokemon/main/1.png"
+    },
+    {
+      "name": "Charmander",
+      "img": "images/pokemon/main/2.png"
+    },
+    {
+      "name": "Bulbasaur",
+      "img": "images/pokemon/main/3.png"
+    },
+    {
+      "name": "Squirtle",
+      "img": "images/pokemon/main/4.png"
+    },
+    {
+      "name": "Pidgey",
+      "img": "images/pokemon/main/5.png"
+    },
+    {
+      "name": "Starmie",
+      "img": "images/pokemon/main/6.png"
+    },
+    {
+      "name": "Vulpix",
+      "img": "images/pokemon/main/7.png"
+    },
+    {
+      "name": "MewTwo",
+      "img": "images/pokemon/main/8.png"
+    }
+  ]
+}

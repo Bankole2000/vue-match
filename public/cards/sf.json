@@ -1,0 +1,89 @@
+{
+  "default": [
+    {
+      "img": "images/sf/bg/1.png"
+    },
+    {
+      "img": "images/sf/bg/2.png"
+    },
+    {
+      "img": "images/sf/bg/3.png"
+    },
+    {
+      "img": "images/sf/bg/4.png"
+    },
+    {
+      "img": "images/sf/bg/5.png"
+    },
+    {
+      "img": "images/sf/bg/6.png"
+    },
+    {
+      "img": "images/sf/bg/7.png"
+    },
+    {
+      "img": "images/sf/bg/8.png"
+    },
+    {
+      "img": "images/sf/bg/9.png"
+    },
+    {
+      "img": "images/sf/bg/10.png"
+    },
+    {
+      "img": "images/sf/bg/11.png"
+    },
+    {
+      "img": "images/sf/bg/12.png"
+    },
+    {
+      "img": "images/sf/bg/13.png"
+    },
+    {
+      "img": "images/sf/bg/14.png"
+    },
+    {
+      "img": "images/sf/bg/15.png"
+    },
+    {
+      "img": "images/sf/bg/16.png"
+    }
+  ],
+  "blank": {
+    "img": "images/blank.png"
+  },
+  "cards": [
+    {
+      "name": "Ryu",
+      "img": "images/sf/main/1.png"
+    },
+    {
+      "name": "Ken",
+      "img": "images/sf/main/2.png"
+    },
+    {
+      "name": "Chun Li",
+      "img": "images/sf/main/3.png"
+    },
+    {
+      "name": "M Bison",
+      "img": "images/sf/main/4.png"
+    },
+    {
+      "name": "Sagat",
+      "img": "images/sf/main/5.png"
+    },
+    {
+      "name": "Guile",
+      "img": "images/sf/main/6.png"
+    },
+    {
+      "name": "Camy",
+      "img": "images/sf/main/7.png"
+    },
+    {
+      "name": "Akuma",
+      "img": "images/sf/main/8.png"
+    }
+  ]
+}

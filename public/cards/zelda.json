@@ -1,0 +1,89 @@
+{
+  "default": [
+    {
+      "img": "images/zelda/bg/1.png"
+    },
+    {
+      "img": "images/zelda/bg/2.png"
+    },
+    {
+      "img": "images/zelda/bg/3.png"
+    },
+    {
+      "img": "images/zelda/bg/4.png"
+    },
+    {
+      "img": "images/zelda/bg/5.png"
+    },
+    {
+      "img": "images/zelda/bg/6.png"
+    },
+    {
+      "img": "images/zelda/bg/7.png"
+    },
+    {
+      "img": "images/zelda/bg/8.png"
+    },
+    {
+      "img": "images/zelda/bg/9.png"
+    },
+    {
+      "img": "images/zelda/bg/10.png"
+    },
+    {
+      "img": "images/zelda/bg/11.png"
+    },
+    {
+      "img": "images/zelda/bg/12.png"
+    },
+    {
+      "img": "images/zelda/bg/13.png"
+    },
+    {
+      "img": "images/zelda/bg/14.png"
+    },
+    {
+      "img": "images/zelda/bg/15.png"
+    },
+    {
+      "img": "images/zelda/bg/16.png"
+    }
+  ],
+  "blank": {
+    "img": "images/blank.png"
+  },
+  "cards": [
+    {
+      "name": "Link",
+      "img": "images/zelda/main/1.png"
+    },
+    {
+      "name": "Zelda",
+      "img": "images/zelda/main/2.png"
+    },
+    {
+      "name": "Ganondoorf",
+      "img": "images/zelda/main/3.png"
+    },
+    {
+      "name": "Navi",
+      "img": "images/zelda/main/4.png"
+    },
+    {
+      "name": "Sheikh",
+      "img": "images/zelda/main/5.png"
+    },
+    {
+      "name": "Link 4 Swords",
+      "img": "images/zelda/main/6.png"
+    },
+    {
+      "name": "Ganon",
+      "img": "images/zelda/main/7.png"
+    },
+    {
+      "name": "Fierce Deity Link",
+      "img": "images/zelda/main/8.png"
+    }
+  ]
+}

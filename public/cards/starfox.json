@@ -1,0 +1,89 @@
+{
+  "default": [
+    {
+      "img": "images/starfox/bg/1.png"
+    },
+    {
+      "img": "images/starfox/bg/2.png"
+    },
+    {
+      "img": "images/starfox/bg/3.png"
+    },
+    {
+      "img": "images/starfox/bg/4.png"
+    },
+    {
+      "img": "images/starfox/bg/5.png"
+    },
+    {
+      "img": "images/starfox/bg/6.png"
+    },
+    {
+      "img": "images/starfox/bg/7.png"
+    },
+    {
+      "img": "images/starfox/bg/8.png"
+    },
+    {
+      "img": "images/starfox/bg/9.png"
+    },
+    {
+      "img": "images/starfox/bg/10.png"
+    },
+    {
+      "img": "images/starfox/bg/11.png"
+    },
+    {
+      "img": "images/starfox/bg/12.png"
+    },
+    {
+      "img": "images/starfox/bg/13.png"
+    },
+    {
+      "img": "images/starfox/bg/14.png"
+    },
+    {
+      "img": "images/starfox/bg/15.png"
+    },
+    {
+      "img": "images/starfox/bg/16.png"
+    }
+  ],
+  "blank": {
+    "img": "images/blank.png"
+  },
+  "cards": [
+    {
+      "name": "Fox McCloud",
+      "img": "images/starfox/main/1.png"
+    },
+    {
+      "name": "Andross",
+      "img": "images/starfox/main/2.png"
+    },
+    {
+      "name": "Falco Lombardi",
+      "img": "images/starfox/main/3.png"
+    },
+    {
+      "name": "Peppy",
+      "img": "images/starfox/main/4.png"
+    },
+    {
+      "name": "Slippy Toad",
+      "img": "images/starfox/main/5.png"
+    },
+    {
+      "name": "StarWolf",
+      "img": "images/starfox/main/6.png"
+    },
+    {
+      "name": "General Pepper",
+      "img": "images/starfox/main/7.png"
+    },
+    {
+      "name": "Kat",
+      "img": "images/starfox/main/8.png"
+    }
+  ]
+}

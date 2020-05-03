@@ -1,0 +1,44 @@
+{
+  "default": {
+    "name": "hotdog",
+    "img": "images/hotdog.png"
+  },
+  "blank": {
+    "name": "default-empty",
+    "img": "images/default-empty.png"
+  },
+  "cards": [
+    {
+      "name": "hotdog",
+      "img": "images/hotdog.png"
+    },
+    {
+      "name": "hotdog",
+      "img": "images/hotdog.png"
+    },
+    {
+      "name": "hotdog",
+      "img": "images/hotdog.png"
+    },
+    {
+      "name": "hotdog",
+      "img": "images/hotdog.png"
+    },
+    {
+      "name": "hotdog",
+      "img": "images/hotdog.png"
+    },
+    {
+      "name": "hotdog",
+      "img": "images/hotdog.png"
+    },
+    {
+      "name": "hotdog",
+      "img": "images/hotdog.png"
+    },
+    {
+      "name": "hotdog",
+      "img": "images/hotdog.png"
+    }
+  ]
+}
