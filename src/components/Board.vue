@@ -25,8 +25,9 @@
         <v-row v-if="gameComplete">
         <v-col class="d-flex justify-center align-center mx-auto pt-0" cols="11" sm="11" md="6">
           <h3>
-            <span class="success--text"><v-icon class="success--text">mdi-star-circle</v-icon>
-              You Win!
+            <span class="success--text"><v-icon class="success--text">mdi-star-circle
+              mdi-spin</v-icon>
+              You Won! 🥳🥳🎉
             </span>
             <span class="hidden-sm-and-down">
               Congratulations
@@ -38,7 +39,7 @@
 
       </v-row>
       <div v-if="gameComplete" class="d-flex justify-center py-0">
-          <h3>🎮 Try Selecting a New theme 👆 </h3>
+          <h3>🎮 Try Selecting a different theme 👆 </h3>
         </div>
       </v-container>
     </v-container>
