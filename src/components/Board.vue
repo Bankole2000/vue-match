@@ -144,6 +144,7 @@ export default {
       },
       gameComplete: false,
       flipped: Array(16).fill(false),
+      cardsFlipped: [],
       snackbar: {
         snackbar: false,
         text: null,
@@ -161,6 +162,7 @@ export default {
         default: {},
         empty: {},
       };
+      this.cardsFlipped = [];
       this.gameComplete = false;
       fetch(`/cards/${this.theme}.json`)
         .then((res) => res.json())
@@ -185,6 +187,7 @@ export default {
       if (cards[0] === cards[1]) {
         console.log('matched', ids);
         this.cardsWon.push(cards);
+        this.cardsFlipped.push(...ids);
         this.cardsChosenId = [];
         this.cardsChosen = [];
         this.$refs.img[ids[0]].$el.classList.add('faded');
@@ -219,7 +222,7 @@ export default {
     },
     flipCard(i, game, card) {
       // console.log(i, game, $event);
-      if (this.cardsChosenId.includes(i)) {
+      if (this.cardsChosenId.includes(i) || this.cardsFlipped.includes(i)) {
         console.log('already chosen card');
         return;
       }
