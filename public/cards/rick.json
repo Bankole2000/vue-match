@@ -1,0 +1,89 @@
+{
+  "default": [
+    {
+      "img": "images/rick/bg/1.png"
+    },
+    {
+      "img": "images/rick/bg/2.png"
+    },
+    {
+      "img": "images/rick/bg/3.png"
+    },
+    {
+      "img": "images/rick/bg/4.png"
+    },
+    {
+      "img": "images/rick/bg/5.png"
+    },
+    {
+      "img": "images/rick/bg/6.png"
+    },
+    {
+      "img": "images/rick/bg/7.png"
+    },
+    {
+      "img": "images/rick/bg/8.png"
+    },
+    {
+      "img": "images/rick/bg/9.png"
+    },
+    {
+      "img": "images/rick/bg/10.png"
+    },
+    {
+      "img": "images/rick/bg/11.png"
+    },
+    {
+      "img": "images/rick/bg/12.png"
+    },
+    {
+      "img": "images/rick/bg/13.png"
+    },
+    {
+      "img": "images/rick/bg/14.png"
+    },
+    {
+      "img": "images/rick/bg/15.png"
+    },
+    {
+      "img": "images/rick/bg/16.png"
+    }
+  ],
+  "blank": {
+    "img": "images/blank.png"
+  },
+  "cards": [
+    {
+      "name": "Cloud",
+      "img": "images/rick/main/1.png"
+    },
+    {
+      "name": "Tifa",
+      "img": "images/rick/main/2.png"
+    },
+    {
+      "name": "Aerith",
+      "img": "images/rick/main/3.png"
+    },
+    {
+      "name": "Barret",
+      "img": "images/rick/main/4.png"
+    },
+    {
+      "name": "Sephiroth",
+      "img": "images/rick/main/5.png"
+    },
+    {
+      "name": "Vincent",
+      "img": "images/rick/main/6.png"
+    },
+    {
+      "name": "Zack",
+      "img": "images/rick/main/7.png"
+    },
+    {
+      "name": "Rufus",
+      "img": "images/rick/main/8.png"
+    }
+  ]
+}

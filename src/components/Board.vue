@@ -110,6 +110,14 @@ export default {
           value: 'got',
         },
         {
+          text: 'Rick and Morty',
+          value: 'rick',
+        },
+        {
+          text: 'The Big Bang Theory',
+          value: 'tbbt',
+        },
+        {
           text: 'Super Mario',
           value: 'mario',
         },
