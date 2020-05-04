@@ -62,6 +62,7 @@
             v-if="flipped[i]"
             :src="card.img"
             ref="img"
+            eager
             >
             <v-card-title v-if="flipped[i]"
             style="background-image: linear-gradient(to top, black, transparent);"
@@ -73,6 +74,7 @@
           v-if="!flipped[i]"
           :src="game.default[i].img"
           ref="img"
+          eager
             >
             <v-card-title v-if="!flipped[i]"></v-card-title>
           </v-img>
@@ -202,16 +204,17 @@ export default {
       console.log('not matched', ids);
       this.cardsChosen = [];
       this.cardsChosenId = [];
-      this.$refs.img[ids[0]].$el.classList.remove('flipped');
-      this.$refs.img[ids[1]].$el.classList.remove('flipped');
-      this.flipped.splice(ids[0], 1, false);
-      this.flipped.splice(ids[1], 1, false);
+
       this.snackbar.snackbar = true;
       this.snackbar.text = 'Not Matched';
       this.snackbar.sclass = 'error';
-      this.snackbar.timeout = 1000;
+      this.snackbar.timeout = 700;
       setTimeout(() => {
         this.snackbar.snackbar = false;
+        this.$refs.img[ids[0]].$el.classList.remove('flipped');
+        this.$refs.img[ids[1]].$el.classList.remove('flipped');
+        this.flipped.splice(ids[0], 1, false);
+        this.flipped.splice(ids[1], 1, false);
       }, this.snackbar.timeout);
     },
     flipCard(i, game, card) {
