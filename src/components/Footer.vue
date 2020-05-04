@@ -27,7 +27,7 @@
         with <span class="primary--text"><i class="mdi mdi-vuejs"></i> VueJS</span> and
         <span class="primary--text"><i class="mdi mdi-vuetify"></i> Vuetify</span> for practice
         and demonstration purposes.
-        <a href="http://bankole2000.github.io" target="_blank">
+        <a href="http://bankole2000.github.io/portfolio" target="_blank">
         <span class="primary--text font-weight-bold">The Developer</span></a> is currently
         available for projects, collaborations, training and/or remote employment.
         Feel free to <a href="tel:+2348069166906">
@@ -40,7 +40,7 @@
 
       <v-card-text class="secondary--text text-darken-5">
         &copy; {{ new Date().getFullYear() }} —
-        <a href="https://bankole2000.github.io/porfolio"><strong>Bankole Esan</strong></a>
+        <a href="https://bankole2000.github.io/portfolio"><strong>Bankole Esan</strong></a>
       </v-card-text>
     </v-card>
   </v-footer>
