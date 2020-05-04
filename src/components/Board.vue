@@ -99,7 +99,7 @@ export default {
   },
   data() {
     return {
-      theme: 'zelda',
+      theme: 'got',
       themes: [
         {
           text: 'Finaly Fantasy VII',
