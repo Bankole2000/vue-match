@@ -1,129 +1,152 @@
 <template>
-<div class="page">
-
-  <v-content style="padding-top: 0px; width: 80vw; margin: auto;">
-    <v-container>
-      <v-layout class="d-flex justify-center">
-        <h1
-        class="display-2 grey--text text--darken-3 mt-4 ml-4 font-weight-thin">
-        Score: {{ cardsWon.length }}
-        </h1>
-      </v-layout>
+  <div class="page">
+    <v-content style="padding-top: 0px; width: 80vw; margin: auto;">
       <v-container>
-      <v-row>
-        <v-col class="d-flex justify-center mx-auto py-0" cols="11" sm="11">
-          <v-select
-            :items="themes"
-            label="Select Game Theme"
-            v-model="theme"
-            solo
-            @change="startNewGame"
-          ></v-select>
-        </v-col>
-      </v-row>
+        <v-layout class="d-flex wrap justify-center">
+          <h1 class="display-1 grey--text text--darken-3 mt-4 ml-4 font-weight-thin">
+            <span class="primary--text font-weight-regular">Score</span>
+            : <span :class="{'success--text font-weight-bold': gameWon,
+            'error--text font-weight-bold': gameLost }">{{ cardsWon.length }}</span>
+          </h1>
+          <vac :end-time="new Date().getTime() + 60000" :auto-start="false" ref="vac2"
+          @finish="endGame">
+            <template
+              v-slot:process="{ timeObj }">
+              <h1 class="display-1 grey--text text--darken-3 mt-4 ml-4 font-weight-thin"
+              style="text-align: center;">
+                <span class="primary--text font-weight-regular">Time Left:</span>
+                <span :class="{'success--text font-weight-bold': gameWon }">
+                  {{ `${timeObj.m}:${timeObj.s}` }}
+                  </span></h1>
+            </template>
+            <template
+              v-slot:finish>
+              <h1 class="error--text text--darken-1 mt-4 ml-4 display-1">Time UP!</h1>
+            </template>
+          </vac>
+        </v-layout>
+        <v-container>
+          <v-row>
+            <v-col class="d-flex justify-center mx-auto py-0" cols="11" sm="11">
+              <v-select
+                :items="themes"
+                label="Select Game Theme"
+                v-model="theme"
+                solo
+                @change="startNewGame"
+              ></v-select>
+            </v-col>
+          </v-row>
 
-        <v-row v-if="gameComplete">
-        <v-col class="d-flex justify-center align-center mx-auto pt-0" cols="11" sm="11" md="6">
-          <h3>
-            <span class="success--text"><v-icon class="success--text">mdi-star-circle
-              mdi-spin</v-icon>
-              You Won! 🥳🥳🎉
-            </span>
-            <span class="hidden-sm-and-down">
-              Congratulations
-            </span>
-           </h3>
-          <v-spacer></v-spacer>
-          <v-btn class="primary" @click="startNewGame">New Game</v-btn>
-        </v-col>
-
-      </v-row>
-      <div v-if="gameComplete" class="d-flex justify-center py-0">
-          <h3>🎮 Try Selecting a different theme 👆 </h3>
-        </div>
+          <v-row v-if="gameComplete">
+            <v-col class="d-flex justify-center align-center mx-auto pt-0" cols="11" sm="11" md="6">
+              <h3 v-if="gameWon">
+                <span class="success--text"
+                  ><v-icon class="success--text">mdi-star-circle mdi-spin</v-icon>
+                  You Won! 🥳🥳🎉
+                </span>
+                <span class="hidden-sm-and-down">
+                  Congratulations
+                </span>
+              </h3>
+              <h3 v-if="gameLost">
+                <span class="error--text"
+                  ><v-icon class="error--text">mdi-skull-crossbones</v-icon>
+                  You Lost! 😭😭😭
+                </span>
+                <span class="hidden-sm-and-down">
+                  Hey, just try again 🤗
+                </span>
+              </h3>
+              <v-spacer></v-spacer>
+              <v-btn class="primary" @click="startNewGame">New Game</v-btn>
+            </v-col>
+          </v-row>
+          <div v-if="gameComplete" class="d-flex justify-center py-0">
+            <h3>🎮 Try Selecting a different theme 👆</h3>
+          </div>
+        </v-container>
       </v-container>
-    </v-container>
-    <Snackbar :snackbar='snackbar.snackbar' :text='snackbar.text' :sclass='snackbar.sclass'
-      :timeout='snackbar.timeout' />
-  </v-content>
+      <Snackbar
+        :snackbar="snackbar.snackbar"
+        :text="snackbar.text"
+        :sclass="snackbar.sclass"
+        :timeout="snackbar.timeout"
+      />
+    </v-content>
 
-  <v-layout style="margin: auto;">
-    <div class="board">
-      <div class="grid">
-        <v-card
-          class="mx-auto card"
-          v-for="(card, i) in game.cards"
-          :key = i
-          @click='flipCard(i, game, card)'
-          :data-id = i
-          :id = i
+    <v-layout style="margin: auto;">
+      <div class="board">
+        <div class="grid">
+          <v-card
+            class="mx-auto card"
+            v-for="(card, i) in game.cards"
+            :key="i"
+            @click="canPlay ? flipCard(i, game, card) : '' "
+            :data-id="i"
+            :id="i"
           >
-          <v-img
-            class="white--text align-end card"
-            v-if="flipped[i]"
-            :src="card.img"
-            ref="img"
-            eager
+            <v-img
+              class="white--text align-end card"
+              v-if="flipped[i]"
+              :src="card.img"
+              ref="img"
+              rel="preload"
+              eager
             >
-            <v-card-title v-if="flipped[i]"
-            style="background-image: linear-gradient(to top, black, transparent);"
-            class="hidden-sm-and-down"><span
-            class="card-name">{{ card.name }}</span></v-card-title>
-          </v-img>
-          <v-img
-          class="white--text align-end card"
-          v-if="!flipped[i]"
-          :src="game.default[i].img"
-          ref="img"
-          eager
+              <v-card-title
+                v-if="flipped[i]"
+                style="background-image: linear-gradient(to top, black, transparent);"
+                class="hidden-sm-and-down"
+                ><span class="card-name">{{ card.name }}</span></v-card-title
+              >
+            </v-img>
+            <v-img
+              class="white--text align-end card"
+              v-if="!flipped[i]"
+              :src="game.default[i].img"
+              ref="img"
+              eager
             >
-            <v-card-title v-if="!flipped[i]"></v-card-title>
-          </v-img>
-        </v-card>
+              <v-card-title v-if="!flipped[i]"></v-card-title>
+            </v-img>
+          </v-card>
+        </div>
       </div>
+    </v-layout>
+    <Loader :loading="loading" />
+    <audio ref="victory" src="victory.mp3"></audio>
+    <audio ref="defeat" src="defeat.webm"></audio>
+    <audio ref="success" src="success.mp3"></audio>
+    <audio ref="error" src="error.mp3"></audio>
+    <div class="d-flex justify-center pt-5 pb-0">
+      <audio autoplay loop controls ref="themeMusic" :src="themeOst"></audio>
     </div>
-  </v-layout>
-  <Loader :loading ='loading' />
-  <audio
-        ref="victory"
-        src="victory.mp3">
-  </audio>
-  <audio
-        ref="success"
-        src="success.mp3">
-  </audio>
-  <audio
-        ref="error"
-        src="error.mp3">
-  </audio>
-  <div class="d-flex justify-center pt-5 pb-0">
-    <audio
-        autoplay
-        loop
-        controls
-        ref="themeMusic"
-        :src="themeOst">
-    </audio>
+    <WelcomeModal :welcome='welcome' @startGame='startNewGame' />
   </div>
-
-</div>
 </template>
 
 <script>
 import Snackbar from '@/components/Snackbar.vue';
 import Loader from '@/components/Loader.vue';
+import WelcomeModal from '@/components/WelcomeModal.vue';
 
 export default {
   name: 'Board',
   components: {
     Snackbar,
     Loader,
+    WelcomeModal,
   },
   data() {
     return {
       theme: 'got',
       themeOst: 'audio/got.webm',
       loadingTime: 3000,
+      canPlay: true,
+      welcome: true,
+      gameWon: false,
+      gameLost: false,
       themes: [
         {
           text: 'Family Guy',
@@ -209,9 +232,42 @@ export default {
         timeout: 1000,
       },
       loading: false,
+      timeObj: {
+        endTime: 1542634411361,
+        speed: 1000,
+        leftTime: 97019,
+        d: '0',
+        h: '00',
+        m: '01',
+        s: '37',
+        ms: '019',
+        org: {
+          d: 0.001134247685185185,
+          h: 0.02722194444444444,
+          m: 1.6333166666666665,
+          s: 37.998999999999995,
+          ms: 19,
+        },
+        ceil: {
+          d: 1,
+          h: 1,
+          m: 2,
+          s: 98,
+        },
+      },
     };
   },
   methods: {
+    // End Game
+    endGame() {
+      this.gameComplete = true;
+      this.gameLost = true;
+      this.canPlay = false;
+      this.$refs.defeat.volume = 0.3;
+      this.$refs.defeat.play();
+      const end = Array(16).fill(true);
+      this.flipped.splice(0, 16, ...end);
+    },
     // Audio Stuff
     changeAudio(audio) {
       this.themeOst = audio.music;
@@ -224,18 +280,14 @@ export default {
             }
             this.loading = false;
             console.log('Autoplay Successful');
+            this.$refs.vac2.startCountdown(true);
+            this.canPlay = true;
           })
           .catch((err) => console.log('AutoPlay Prevented', err));
       }
-      // if (audio.startPoint) {
-      //   this.$refs.themeMusic.currentTime = audio.startPoint;
-      // }
-      // if (this.$refs.themeMusic.readyState === 4) {
-
-      // }
-      // this.$refs.themeMusic.play();
     },
     startNewGame() {
+      this.welcome = false;
       this.loading = true;
       this.game = {
         cards: [],
@@ -244,6 +296,8 @@ export default {
       };
       this.cardsFlipped = [];
       this.gameComplete = false;
+      this.gameLost = false;
+      this.gameWon = false;
       fetch(`/cards/${this.theme}.json`)
         .then((res) => res.json())
         .then((data) => {
@@ -251,6 +305,9 @@ export default {
           this.cardArray = this.game.cards;
           this.cardArray.sort(() => 0.5 - Math.random());
           this.game.default = data.default;
+          const cardImages = this.cardArray.map((card) => card.img);
+          const defaultImages = data.default.map((img) => img);
+          console.log(defaultImages, cardImages);
           this.game.empty = data.empty;
           this.imgsrc = this.game.default[0].img;
           this.flipped = Array(16).fill(false);
@@ -259,7 +316,6 @@ export default {
           this.cardsChosenId = [];
           this.cardsWon = [];
           setTimeout(() => {
-            // this.loading = false;
             this.changeAudio(data.audio);
           }, this.loadingTime);
         });
@@ -282,11 +338,15 @@ export default {
         this.snackbar.text = 'Matched';
         this.snackbar.sclass = 'success';
         this.snackbar.timeout = 1000;
+        this.canPlay = true;
         setTimeout(() => {
           this.snackbar.snackbar = false;
         }, this.snackbar.timeout);
         if (this.cardsWon.length === 8) {
           this.gameComplete = true;
+          this.gameWon = true;
+          this.canPlay = false;
+          this.$refs.vac2.stopCountdown(true);
           this.$refs.victory.volume = 0.3;
           this.$refs.victory.play();
         }
@@ -300,19 +360,22 @@ export default {
       this.snackbar.snackbar = true;
       this.snackbar.text = 'Not Matched';
       this.snackbar.sclass = 'error';
-      this.snackbar.timeout = 700;
+      this.snackbar.timeout = 500;
       setTimeout(() => {
         this.snackbar.snackbar = false;
         this.$refs.img[ids[0]].$el.classList.remove('flipped');
         this.$refs.img[ids[1]].$el.classList.remove('flipped');
         this.flipped.splice(ids[0], 1, false);
         this.flipped.splice(ids[1], 1, false);
+        this.canPlay = true;
       }, this.snackbar.timeout);
     },
     flipCard(i, game, card) {
       // console.log(i, game, $event);
+      this.canPlay = false;
       if (this.cardsChosenId.includes(i) || this.cardsFlipped.includes(i)) {
         console.log('already chosen card');
+        this.canPlay = true;
         return;
       }
       this.cardsChosen.push(card.name);
@@ -323,6 +386,10 @@ export default {
       // arr.$set(index, value)
       // arr.splice(index, 1, value)
       this.flipped.splice(i, 1, true);
+      if (this.cardsChosen.length === 1) {
+        this.canPlay = true;
+        return;
+      }
       if (this.cardsChosen.length === 2) {
         console.log('chosen 2 cards');
         setTimeout(() => {
@@ -333,7 +400,7 @@ export default {
     },
   },
   created() {
-    this.loading = true;
+    // this.loading = true;
     fetch(`/cards/${this.theme}.json`)
       .then((res) => res.json())
       .then((data) => {
@@ -343,11 +410,12 @@ export default {
         this.game.default = data.default;
         this.imgsrc = this.game.default[0].img;
         setTimeout(() => {
-          this.loading = false;
-          this.$refs.themeMusic.volume = 0.5;
+          // this.loading = false;
+
           if (this.$refs.themeMusic.play() !== undefined) {
             this.$refs.themeMusic.play()
               .then(() => {
+                this.$refs.themeMusic.volume = 0.5;
                 console.log('Autoplay Successful');
               })
               .catch((err) => console.log('AutoPlay Prevented', err));
@@ -389,17 +457,17 @@ export default {
 
 .card-name {
   transform: rotateY(180deg) !important;
-  font-size: .8rem;
+  font-size: 0.8rem;
   line-height: 10%;
 }
-.flipped{
+.flipped {
   transform: rotateY(180deg) !important;
   transition: transform 0.3s;
   /* transform-style: preserve-3d; */
   z-index: 2;
 }
 .faded {
-  opacity: .3;
+  opacity: 0.3;
   filter: grayscale(100%);
 }
 
@@ -408,5 +476,4 @@ export default {
     width: 150px;
   }
 }
-
 </style>

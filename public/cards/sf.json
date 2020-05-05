@@ -50,9 +50,9 @@
     }
   ],
   "audio": {
-    "volume": 0.45,
+    "volume": 0.5,
     "music": "audio/sf.webm",
-    "startPoint": 8
+    "startPoint": 9
   },
   "cards": [
     {

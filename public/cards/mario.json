@@ -50,7 +50,7 @@
     }
   ],
   "audio": {
-    "volume": 0.5,
+    "volume": 0.4,
     "music": "audio/mario.webm",
     "startPoint": 68
   },
