@@ -96,12 +96,16 @@
         ref="error"
         src="error.mp3">
   </audio>
-  <audio
+  <div class="d-flex justify-center pt-5 pb-0">
+    <audio
         autoplay
         loop
+        controls
         ref="themeMusic"
         :src="themeOst">
-  </audio>
+    </audio>
+  </div>
+
 </div>
 </template>
 
@@ -326,14 +330,17 @@ export default {
         this.cardArray = this.game.cards;
         this.cardArray.sort(() => 0.5 - Math.random());
         this.game.default = data.default;
-        this.game.empty = data.empty;
         this.imgsrc = this.game.default[0].img;
-        const audio = new Audio('../audio/got.webm');
-
         setTimeout(() => {
           this.loading = false;
-          audio.volume = 0.5;
-          audio.play();
+          this.$refs.themeMusic.volume = 0.5;
+          if (this.$refs.themeMusic.play() !== undefined) {
+            this.$refs.themeMusic.play()
+              .then(() => {
+                console.log('Autoplay Successful');
+              })
+              .catch((err) => console.log('AutoPlay Prevented', err));
+          }
         }, this.loadingTime);
       });
   },
