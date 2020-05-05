@@ -119,6 +119,7 @@ export default {
     return {
       theme: 'got',
       themeOst: 'audio/got.webm',
+      loadingTime: 3000,
       themes: [
         {
           text: 'Family Guy',
@@ -242,7 +243,7 @@ export default {
           setTimeout(() => {
             this.loading = false;
             this.changeAudio(data.audio);
-          }, 1500);
+          }, this.loadingTime);
         });
     },
     checkForMatch(cards, ids) {
@@ -251,7 +252,7 @@ export default {
 
       if (cards[0] === cards[1]) {
         console.log('matched', ids);
-        this.$refs.success.volume = 0.15;
+        this.$refs.success.volume = 0.5;
         this.$refs.success.play();
         this.cardsWon.push(cards);
         this.cardsFlipped.push(...ids);
@@ -268,13 +269,13 @@ export default {
         }, this.snackbar.timeout);
         if (this.cardsWon.length === 8) {
           this.gameComplete = true;
-          this.$refs.victory.volume = 0.15;
+          this.$refs.victory.volume = 0.3;
           this.$refs.victory.play();
         }
         return;
       }
       console.log('not matched', ids);
-      this.$refs.error.volume = 0.15;
+      this.$refs.error.volume = 0.5;
       this.$refs.error.play();
       this.cardsChosen = [];
       this.cardsChosenId = [];
@@ -325,15 +326,18 @@ export default {
         this.game.empty = data.empty;
         this.imgsrc = this.game.default[0].img;
 
-        /*  Audio Stuff Begins here */
-        this.$refs.themeMusic.volume = 0.1;
-        this.$refs.themeMusic.play();
-        /* Audio stuff ends here */
+
         setTimeout(() => {
           this.loading = false;
-        }, 1500);
+        }, this.loadingTime);
       });
   },
+  mounted() {
+     /*  Audio Stuff Begins here */
+        this.$refs.themeMusic.volume = 0.5;
+        this.$refs.themeMusic.play();
+        /* Audio stuff ends here */
+  }
 };
 </script>
 
