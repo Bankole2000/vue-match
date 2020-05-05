@@ -328,7 +328,7 @@ export default {
         this.game.default = data.default;
         this.game.empty = data.empty;
         this.imgsrc = this.game.default[0].img;
-        const audio = new Audio('../assets/audio/got.webm');
+        const audio = new Audio('../audio/got.webm');
 
         setTimeout(() => {
           this.loading = false;
