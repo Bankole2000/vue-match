@@ -49,8 +49,9 @@
       "img": "images/tbbt/bg/16.png"
     }
   ],
-  "blank": {
-    "img": "images/blank.png"
+  "audio": {
+    "volume": 0.2,
+    "music": "audio/tbbt.webm"
   },
   "cards": [
     {

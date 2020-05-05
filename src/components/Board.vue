@@ -89,6 +89,16 @@
         src="victory.mp3">
   </audio>
   <audio
+        ref="success"
+        src="success.mp3">
+  </audio>
+  <audio
+        ref="error"
+        src="error.mp3">
+  </audio>
+  <audio
+        autoplay
+        loop
         ref="themeMusic"
         :src="themeOst">
   </audio>
@@ -108,7 +118,7 @@ export default {
   data() {
     return {
       theme: 'got',
-      themeOst: '',
+      themeOst: 'audio/got.webm',
       themes: [
         {
           text: 'Family Guy',
@@ -197,6 +207,15 @@ export default {
     };
   },
   methods: {
+    // Audio Stuff
+    changeAudio(audio) {
+      this.themeOst = audio.music;
+      this.$refs.themeMusic.volume = audio.volume;
+      if (audio.startPoint) {
+        this.$refs.themeMusic.currentTime = audio.startPoint;
+      }
+      this.$refs.themeMusic.play();
+    },
     startNewGame() {
       this.loading = true;
       this.game = {
@@ -222,6 +241,7 @@ export default {
           this.cardsWon = [];
           setTimeout(() => {
             this.loading = false;
+            this.changeAudio(data.audio);
           }, 1500);
         });
     },
@@ -231,6 +251,8 @@ export default {
 
       if (cards[0] === cards[1]) {
         console.log('matched', ids);
+        this.$refs.success.volume = 0.15;
+        this.$refs.success.play();
         this.cardsWon.push(cards);
         this.cardsFlipped.push(...ids);
         this.cardsChosenId = [];
@@ -246,15 +268,16 @@ export default {
         }, this.snackbar.timeout);
         if (this.cardsWon.length === 8) {
           this.gameComplete = true;
-          this.$refs.victory.volume = 0.1;
+          this.$refs.victory.volume = 0.15;
           this.$refs.victory.play();
         }
         return;
       }
       console.log('not matched', ids);
+      this.$refs.error.volume = 0.15;
+      this.$refs.error.play();
       this.cardsChosen = [];
       this.cardsChosenId = [];
-
       this.snackbar.snackbar = true;
       this.snackbar.text = 'Not Matched';
       this.snackbar.sclass = 'error';
@@ -301,6 +324,11 @@ export default {
         this.game.default = data.default;
         this.game.empty = data.empty;
         this.imgsrc = this.game.default[0].img;
+
+        /*  Audio Stuff Begins here */
+        this.$refs.themeMusic.volume = 0.1;
+        this.$refs.themeMusic.play();
+        /* Audio stuff ends here */
         setTimeout(() => {
           this.loading = false;
         }, 1500);

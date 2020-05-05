@@ -49,8 +49,9 @@
       "img": "images/tekken/bg/16.png"
     }
   ],
-  "blank": {
-    "img": "images/blank.png"
+  "audio": {
+    "volume": 0.2,
+    "music": "audio/tekken.webm"
   },
   "cards": [
     {

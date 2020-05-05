@@ -49,8 +49,10 @@
       "img": "images/pokemon/bg/16.png"
     }
   ],
-  "blank": {
-    "img": "images/blank.png"
+  "audio": {
+    "volume": 0.2,
+    "music": "audio/pokemon.webm",
+    "startPoint": 12
   },
   "cards": [
     {

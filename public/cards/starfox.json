@@ -49,8 +49,10 @@
       "img": "images/starfox/bg/16.png"
     }
   ],
-  "blank": {
-    "img": "images/blank.png"
+  "audio": {
+    "volume": 0.2,
+    "music": "audio/starfox.webm",
+    "startPoint": 9
   },
   "cards": [
     {
