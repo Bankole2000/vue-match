@@ -328,17 +328,19 @@ export default {
         this.game.default = data.default;
         this.game.empty = data.empty;
         this.imgsrc = this.game.default[0].img;
-
+        const audio = new Audio('../assets/audio/got.webm');
 
         setTimeout(() => {
           this.loading = false;
+          audio.volume = 0.5;
+          audio.play();
         }, this.loadingTime);
       });
   },
   mounted() {
     /* Audio Stuff Begins here */
-    this.$refs.themeMusic.volume = 0.5;
-    this.$refs.themeMusic.play();
+    // this.$refs.themeMusic.volume = 0.5;
+    // this.$refs.themeMusic.play();
     /* Audio stuff ends here */
   },
 };
