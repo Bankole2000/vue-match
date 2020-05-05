@@ -118,6 +118,30 @@ export default {
           value: 'tbbt',
         },
         {
+          text: 'Family Guy',
+          value: 'familyguy',
+        },
+        {
+          text: 'Friends',
+          value: 'friends',
+        },
+        {
+          text: 'Pokemon (Legendary)',
+          value: 'pokemon2',
+        },
+        {
+          text: 'Sonic The Hedgehog',
+          value: 'sonic',
+        },
+        {
+          text: 'Soul Calibur',
+          value: 'soulc',
+        },
+        {
+          text: 'Tekken Tournament',
+          value: 'tekken',
+        },
+        {
           text: 'Super Mario',
           value: 'mario',
         },

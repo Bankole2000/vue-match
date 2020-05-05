@@ -1,0 +1,89 @@
+{
+  "default": [
+    {
+      "img": "images/sonic/bg/1.png"
+    },
+    {
+      "img": "images/sonic/bg/2.png"
+    },
+    {
+      "img": "images/sonic/bg/3.png"
+    },
+    {
+      "img": "images/sonic/bg/4.png"
+    },
+    {
+      "img": "images/sonic/bg/5.png"
+    },
+    {
+      "img": "images/sonic/bg/6.png"
+    },
+    {
+      "img": "images/sonic/bg/7.png"
+    },
+    {
+      "img": "images/sonic/bg/8.png"
+    },
+    {
+      "img": "images/sonic/bg/9.png"
+    },
+    {
+      "img": "images/sonic/bg/10.png"
+    },
+    {
+      "img": "images/sonic/bg/11.png"
+    },
+    {
+      "img": "images/sonic/bg/12.png"
+    },
+    {
+      "img": "images/sonic/bg/13.png"
+    },
+    {
+      "img": "images/sonic/bg/14.png"
+    },
+    {
+      "img": "images/sonic/bg/15.png"
+    },
+    {
+      "img": "images/sonic/bg/16.png"
+    }
+  ],
+  "blank": {
+    "img": "images/blank.png"
+  },
+  "cards": [
+    {
+      "name": "Amy Rose",
+      "img": "images/sonic/main/1.png"
+    },
+    {
+      "name": "Sonic",
+      "img": "images/sonic/main/2.png"
+    },
+    {
+      "name": "Knuckles",
+      "img": "images/sonic/main/3.png"
+    },
+    {
+      "name": "Dr Robotnik",
+      "img": "images/sonic/main/4.png"
+    },
+    {
+      "name": "Shadow",
+      "img": "images/sonic/main/5.png"
+    },
+    {
+      "name": "Silver",
+      "img": "images/sonic/main/6.png"
+    },
+    {
+      "name": "Tails",
+      "img": "images/sonic/main/7.png"
+    },
+    {
+      "name": "Tikal",
+      "img": "images/sonic/main/8.png"
+    }
+  ]
+}

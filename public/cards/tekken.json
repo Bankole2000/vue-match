@@ -1,0 +1,89 @@
+{
+  "default": [
+    {
+      "img": "images/tekken/bg/1.png"
+    },
+    {
+      "img": "images/tekken/bg/2.png"
+    },
+    {
+      "img": "images/tekken/bg/3.png"
+    },
+    {
+      "img": "images/tekken/bg/4.png"
+    },
+    {
+      "img": "images/tekken/bg/5.png"
+    },
+    {
+      "img": "images/tekken/bg/6.png"
+    },
+    {
+      "img": "images/tekken/bg/7.png"
+    },
+    {
+      "img": "images/tekken/bg/8.png"
+    },
+    {
+      "img": "images/tekken/bg/9.png"
+    },
+    {
+      "img": "images/tekken/bg/10.png"
+    },
+    {
+      "img": "images/tekken/bg/11.png"
+    },
+    {
+      "img": "images/tekken/bg/12.png"
+    },
+    {
+      "img": "images/tekken/bg/13.png"
+    },
+    {
+      "img": "images/tekken/bg/14.png"
+    },
+    {
+      "img": "images/tekken/bg/15.png"
+    },
+    {
+      "img": "images/tekken/bg/16.png"
+    }
+  ],
+  "blank": {
+    "img": "images/blank.png"
+  },
+  "cards": [
+    {
+      "name": "Paul Phoenix",
+      "img": "images/tekken/main/1.png"
+    },
+    {
+      "name": "Eddy Gordo",
+      "img": "images/tekken/main/2.png"
+    },
+    {
+      "name": "Heihachi",
+      "img": "images/tekken/main/3.png"
+    },
+    {
+      "name": "Hwoarang",
+      "img": "images/tekken/main/4.png"
+    },
+    {
+      "name": "Jin Kazama",
+      "img": "images/tekken/main/5.png"
+    },
+    {
+      "name": "Kazuya",
+      "img": "images/tekken/main/6.png"
+    },
+    {
+      "name": "Lei Wu Long",
+      "img": "images/tekken/main/7.png"
+    },
+    {
+      "name": "Xiaoyu",
+      "img": "images/tekken/main/8.png"
+    }
+  ]
+}

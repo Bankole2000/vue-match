@@ -1,0 +1,89 @@
+{
+  "default": [
+    {
+      "img": "images/soulc/bg/1.png"
+    },
+    {
+      "img": "images/soulc/bg/2.png"
+    },
+    {
+      "img": "images/soulc/bg/3.png"
+    },
+    {
+      "img": "images/soulc/bg/4.png"
+    },
+    {
+      "img": "images/soulc/bg/5.png"
+    },
+    {
+      "img": "images/soulc/bg/6.png"
+    },
+    {
+      "img": "images/soulc/bg/7.png"
+    },
+    {
+      "img": "images/soulc/bg/8.png"
+    },
+    {
+      "img": "images/soulc/bg/9.png"
+    },
+    {
+      "img": "images/soulc/bg/10.png"
+    },
+    {
+      "img": "images/soulc/bg/11.png"
+    },
+    {
+      "img": "images/soulc/bg/12.png"
+    },
+    {
+      "img": "images/soulc/bg/13.png"
+    },
+    {
+      "img": "images/soulc/bg/14.png"
+    },
+    {
+      "img": "images/soulc/bg/15.png"
+    },
+    {
+      "img": "images/soulc/bg/16.png"
+    }
+  ],
+  "blank": {
+    "img": "images/blank.png"
+  },
+  "cards": [
+    {
+      "name": "Cervantes",
+      "img": "images/soulc/main/1.png"
+    },
+    {
+      "name": "Hwang",
+      "img": "images/soulc/main/2.png"
+    },
+    {
+      "name": "Ivy",
+      "img": "images/soulc/main/3.png"
+    },
+    {
+      "name": "Kilik",
+      "img": "images/soulc/main/4.png"
+    },
+    {
+      "name": "Maxi",
+      "img": "images/soulc/main/5.png"
+    },
+    {
+      "name": "Mitsurugi",
+      "img": "images/soulc/main/6.png"
+    },
+    {
+      "name": "Taki",
+      "img": "images/soulc/main/7.png"
+    },
+    {
+      "name": "Xianghua",
+      "img": "images/soulc/main/8.png"
+    }
+  ]
+}

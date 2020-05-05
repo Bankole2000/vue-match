@@ -1,0 +1,89 @@
+{
+  "default": [
+    {
+      "img": "images/friends/bg/1.png"
+    },
+    {
+      "img": "images/friends/bg/2.png"
+    },
+    {
+      "img": "images/friends/bg/3.png"
+    },
+    {
+      "img": "images/friends/bg/4.png"
+    },
+    {
+      "img": "images/friends/bg/5.png"
+    },
+    {
+      "img": "images/friends/bg/6.png"
+    },
+    {
+      "img": "images/friends/bg/7.png"
+    },
+    {
+      "img": "images/friends/bg/8.png"
+    },
+    {
+      "img": "images/friends/bg/9.png"
+    },
+    {
+      "img": "images/friends/bg/10.png"
+    },
+    {
+      "img": "images/friends/bg/11.png"
+    },
+    {
+      "img": "images/friends/bg/12.png"
+    },
+    {
+      "img": "images/friends/bg/13.png"
+    },
+    {
+      "img": "images/friends/bg/14.png"
+    },
+    {
+      "img": "images/friends/bg/15.png"
+    },
+    {
+      "img": "images/friends/bg/16.png"
+    }
+  ],
+  "blank": {
+    "img": "images/blank.png"
+  },
+  "cards": [
+    {
+      "name": "Gunther",
+      "img": "images/friends/main/1.png"
+    },
+    {
+      "name": "Chandler",
+      "img": "images/friends/main/2.png"
+    },
+    {
+      "name": "Joey",
+      "img": "images/friends/main/3.png"
+    },
+    {
+      "name": "Monica",
+      "img": "images/friends/main/4.png"
+    },
+    {
+      "name": "Janice",
+      "img": "images/friends/main/5.png"
+    },
+    {
+      "name": "Phoebie",
+      "img": "images/friends/main/6.png"
+    },
+    {
+      "name": "Rachel",
+      "img": "images/friends/main/7.png"
+    },
+    {
+      "name": "Ross",
+      "img": "images/friends/main/8.png"
+    }
+  ]
+}

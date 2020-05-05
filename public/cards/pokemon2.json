@@ -1,0 +1,89 @@
+{
+  "default": [
+    {
+      "img": "images/pokemon2/bg/1.png"
+    },
+    {
+      "img": "images/pokemon2/bg/2.png"
+    },
+    {
+      "img": "images/pokemon2/bg/3.png"
+    },
+    {
+      "img": "images/pokemon2/bg/4.png"
+    },
+    {
+      "img": "images/pokemon2/bg/5.png"
+    },
+    {
+      "img": "images/pokemon2/bg/6.png"
+    },
+    {
+      "img": "images/pokemon2/bg/7.png"
+    },
+    {
+      "img": "images/pokemon2/bg/8.png"
+    },
+    {
+      "img": "images/pokemon2/bg/9.png"
+    },
+    {
+      "img": "images/pokemon2/bg/10.png"
+    },
+    {
+      "img": "images/pokemon2/bg/11.png"
+    },
+    {
+      "img": "images/pokemon2/bg/12.png"
+    },
+    {
+      "img": "images/pokemon2/bg/13.png"
+    },
+    {
+      "img": "images/pokemon2/bg/14.png"
+    },
+    {
+      "img": "images/pokemon2/bg/15.png"
+    },
+    {
+      "img": "images/pokemon2/bg/16.png"
+    }
+  ],
+  "blank": {
+    "img": "images/blank.png"
+  },
+  "cards": [
+    {
+      "name": "Arceus",
+      "img": "images/pokemon2/main/1.png"
+    },
+    {
+      "name": "Entei",
+      "img": "images/pokemon2/main/2.png"
+    },
+    {
+      "name": "Groudon",
+      "img": "images/pokemon2/main/3.png"
+    },
+    {
+      "name": "Kyogre",
+      "img": "images/pokemon2/main/4.png"
+    },
+    {
+      "name": "Lugia",
+      "img": "images/pokemon2/main/5.png"
+    },
+    {
+      "name": "Latias & Latios",
+      "img": "images/pokemon2/main/6.png"
+    },
+    {
+      "name": "Rayquaza",
+      "img": "images/pokemon2/main/7.png"
+    },
+    {
+      "name": "Suicune",
+      "img": "images/pokemon2/main/8.png"
+    }
+  ]
+}
