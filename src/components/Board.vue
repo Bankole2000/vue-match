@@ -215,6 +215,9 @@ export default {
       if (audio.startPoint) {
         this.$refs.themeMusic.currentTime = audio.startPoint;
       }
+      if (this.$refs.themeMusic.readyState === 4) {
+        this.loading = false;
+      }
       this.$refs.themeMusic.play();
     },
     startNewGame() {
@@ -241,7 +244,7 @@ export default {
           this.cardsChosenId = [];
           this.cardsWon = [];
           setTimeout(() => {
-            this.loading = false;
+            // this.loading = false;
             this.changeAudio(data.audio);
           }, this.loadingTime);
         });
@@ -333,11 +336,11 @@ export default {
       });
   },
   mounted() {
-     /*  Audio Stuff Begins here */
-        this.$refs.themeMusic.volume = 0.5;
-        this.$refs.themeMusic.play();
-        /* Audio stuff ends here */
-  }
+    /* Audio Stuff Begins here */
+    this.$refs.themeMusic.volume = 0.5;
+    this.$refs.themeMusic.play();
+    /* Audio stuff ends here */
+  },
 };
 </script>
 
