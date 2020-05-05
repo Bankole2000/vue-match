@@ -50,7 +50,7 @@
     }
   ],
   "audio": {
-    "volume": 0.2,
+    "volume": 0.45,
     "music": "audio/sf.webm",
     "startPoint": 8
   },
