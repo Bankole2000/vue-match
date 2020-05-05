@@ -102,64 +102,64 @@ export default {
       theme: 'got',
       themes: [
         {
-          text: 'Finaly Fantasy VII',
-          value: 'ffvii',
-        },
-        {
-          text: 'Game of Thrones',
-          value: 'got',
-        },
-        {
-          text: 'Rick and Morty',
-          value: 'rick',
-        },
-        {
-          text: 'The Big Bang Theory',
-          value: 'tbbt',
-        },
-        {
           text: 'Family Guy',
           value: 'familyguy',
+        },
+        {
+          text: 'Finaly Fantasy VII',
+          value: 'ffvii',
         },
         {
           text: 'Friends',
           value: 'friends',
         },
         {
-          text: 'Pokemon (Legendary)',
-          value: 'pokemon2',
-        },
-        {
-          text: 'Sonic The Hedgehog',
-          value: 'sonic',
-        },
-        {
-          text: 'Soul Calibur',
-          value: 'soulc',
-        },
-        {
-          text: 'Tekken Tournament',
-          value: 'tekken',
-        },
-        {
-          text: 'Super Mario',
-          value: 'mario',
+          text: 'Game of Thrones',
+          value: 'got',
         },
         {
           text: 'Naruto Shippuden',
           value: 'Naruto',
         },
         {
-          text: 'Pokemon',
+          text: 'Pokemon (Normal)',
           value: 'pokemon',
+        },
+        {
+          text: 'Pokemon (Legendary)',
+          value: 'pokemon2',
+        },
+        {
+          text: 'Rick and Morty',
+          value: 'rick',
+        },
+        {
+          text: 'StarFox',
+          value: 'starfox',
         },
         {
           text: 'Street Fighter',
           value: 'sf',
         },
         {
-          text: 'StarFox',
-          value: 'starfox',
+          text: 'Soul Calibur',
+          value: 'soulc',
+        },
+        {
+          text: 'Sonic The Hedgehog',
+          value: 'sonic',
+        },
+        {
+          text: 'Super Mario',
+          value: 'mario',
+        },
+        {
+          text: 'Tekken Tournament',
+          value: 'tekken',
+        },
+        {
+          text: 'The Big Bang Theory',
+          value: 'tbbt',
         },
         {
           text: 'The Legend of Zelda',
