@@ -216,13 +216,24 @@ export default {
     changeAudio(audio) {
       this.themeOst = audio.music;
       this.$refs.themeMusic.volume = audio.volume;
-      if (audio.startPoint) {
-        this.$refs.themeMusic.currentTime = audio.startPoint;
+      if (this.$refs.themeMusic.play() !== undefined) {
+        this.$refs.themeMusic.play()
+          .then(() => {
+            if (audio.startPoint) {
+              this.$refs.themeMusic.currentTime = audio.startPoint;
+            }
+            this.loading = false;
+            console.log('Autoplay Successful');
+          })
+          .catch((err) => console.log('AutoPlay Prevented', err));
       }
-      if (this.$refs.themeMusic.readyState === 4) {
-        this.loading = false;
-      }
-      this.$refs.themeMusic.play();
+      // if (audio.startPoint) {
+      //   this.$refs.themeMusic.currentTime = audio.startPoint;
+      // }
+      // if (this.$refs.themeMusic.readyState === 4) {
+
+      // }
+      // this.$refs.themeMusic.play();
     },
     startNewGame() {
       this.loading = true;
