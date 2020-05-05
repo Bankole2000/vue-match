@@ -84,6 +84,14 @@
     </div>
   </v-layout>
   <Loader :loading ='loading' />
+  <audio
+        ref="victory"
+        src="victory.mp3">
+  </audio>
+  <audio
+        ref="themeMusic"
+        :src="themeOst">
+  </audio>
 </div>
 </template>
 
@@ -100,6 +108,7 @@ export default {
   data() {
     return {
       theme: 'got',
+      themeOst: '',
       themes: [
         {
           text: 'Family Guy',
@@ -217,6 +226,9 @@ export default {
         });
     },
     checkForMatch(cards, ids) {
+      // console.log(this.$refs.audio.play());
+      console.log(this.$refs.victory);
+
       if (cards[0] === cards[1]) {
         console.log('matched', ids);
         this.cardsWon.push(cards);
@@ -234,6 +246,8 @@ export default {
         }, this.snackbar.timeout);
         if (this.cardsWon.length === 8) {
           this.gameComplete = true;
+          this.$refs.victory.volume = 0.1;
+          this.$refs.victory.play();
         }
         return;
       }
