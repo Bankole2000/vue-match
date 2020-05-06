@@ -138,6 +138,22 @@ import Snackbar from '@/components/Snackbar.vue';
 import Loader from '@/components/Loader.vue';
 import WelcomeModal from '@/components/WelcomeModal.vue';
 import Score from '@/components/Score.vue';
+import familyguy from '@/assets/cards/familyguy.json';
+import ffvii from '@/assets/cards/ffvii.json';
+import friends from '@/assets/cards/friends.json';
+import got from '@/assets/cards/got.json';
+import mario from '@/assets/cards/mario.json';
+import naruto from '@/assets/cards/naruto.json';
+import pokemon from '@/assets/cards/pokemon.json';
+import pokemon2 from '@/assets/cards/pokemon2.json';
+import rick from '@/assets/cards/rick.json';
+import sf from '@/assets/cards/sf.json';
+import sonic from '@/assets/cards/sonic.json';
+import soulc from '@/assets/cards/soulc.json';
+import starfox from '@/assets/cards/starfox.json';
+import tbbt from '@/assets/cards/tbbt.json';
+import tekken from '@/assets/cards/tekken.json';
+import zelda from '@/assets/cards/zelda.json';
 
 export default {
   name: 'Board',
@@ -159,6 +175,24 @@ export default {
       gameWon: false,
       gameLost: false,
       openWon: false,
+      json: {
+        familyguy,
+        ffvii,
+        friends,
+        got,
+        mario,
+        naruto,
+        pokemon,
+        pokemon2,
+        rick,
+        sf,
+        sonic,
+        soulc,
+        starfox,
+        tbbt,
+        tekken,
+        zelda,
+      },
       themes: [
         {
           text: 'Family Guy',
@@ -317,24 +351,31 @@ export default {
       this.gameComplete = false;
       this.gameLost = false;
       this.gameWon = false;
-      fetch(`/cards/${this.theme}.json`)
-        .then((res) => res.json())
-        .then((data) => {
-          this.game.cards.push(...data.cards, ...data.cards);
-          this.cardArray = this.game.cards;
-          this.cardArray.sort(() => 0.5 - Math.random());
-          this.game.default = data.default;
-          this.game.empty = data.empty;
-          this.imgsrc = this.game.default[0].img;
-          this.flipped = Array(16).fill(false);
-          this.cardArray = [];
-          this.cardsChosen = [];
-          this.cardsChosenId = [];
-          this.cardsWon = [];
-          setTimeout(() => {
-            this.changeAudio(data.audio);
-          }, this.loadingTime);
+      // fetch(`/cards/${this.theme}.json`)
+      //   .then((res) => res.json())
+      //   .then((data) => {
+      const data = this.json[this.theme];
+      this.game.cards.push(...data.cards, ...data.cards);
+      this.cardArray = this.game.cards;
+      this.cardArray.sort(() => 0.5 - Math.random());
+      this.game.default = data.default;
+      this.game.empty = data.empty;
+      this.imgsrc = this.game.default[0].img;
+      this.flipped = Array(16).fill(false);
+      this.cardArray = [];
+      this.cardsChosen = [];
+      this.cardsChosenId = [];
+      this.cardsWon = [];
+      // console.log(this.$refs.img);
+      if(this.$refs.img) {
+        this.$refs.img.forEach((comp) => {
+          comp.$el.classList.remove('faded');
+          comp.$el.classList.remove('flipped');
         });
+      }
+      setTimeout(() => {
+        this.changeAudio(data.audio);
+      }, this.loadingTime);
     },
     checkForMatch(cards, ids) {
       // console.log(this.$refs.vac2.endTime - (new Date().getTime()));
@@ -415,26 +456,28 @@ export default {
   },
   created() {
     // this.loading = true;
-    fetch(`/cards/${this.theme}.json`)
-      .then((res) => res.json())
-      .then((data) => {
-        this.game.cards.push(...data.cards, ...data.cards);
-        this.cardArray = this.game.cards;
-        this.cardArray.sort(() => 0.5 - Math.random());
-        this.game.default = data.default;
-        this.imgsrc = this.game.default[0].img;
-        setTimeout(() => {
-          // this.loading = false;
+    console.log(this.json[this.theme]);
 
-          if (this.$refs.themeMusic.play() !== undefined) {
-            this.$refs.themeMusic.play()
-              .then(() => {
-                this.$refs.themeMusic.volume = 0.5;
-              })
-              .catch((err) => console.log('AutoPlay Prevented', err));
-          }
-        }, this.loadingTime);
-      });
+    // fetch(`/cards/${this.theme}.json`)
+    // .then((res) => res.json())
+    // .then((data) => {
+    //   this.game.cards.push(...data.cards, ...data.cards);
+    //   this.cardArray = this.game.cards;
+    //   this.cardArray.sort(() => 0.5 - Math.random());
+    //   this.game.default = data.default;
+    //   this.imgsrc = this.game.default[0].img;
+    //   setTimeout(() => {
+    //     // this.loading = false;
+
+    //     if (this.$refs.themeMusic.play() !== undefined) {
+    //       this.$refs.themeMusic.play()
+    //         .then(() => {
+    //           this.$refs.themeMusic.volume = 0.5;
+    //         })
+    //         .catch((err) => console.log('AutoPlay Prevented', err));
+    //     }
+    //   }, this.loadingTime);
+    // });
   },
   mounted() {
     /* Audio Stuff Begins here */
