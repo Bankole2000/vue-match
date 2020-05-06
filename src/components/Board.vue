@@ -367,7 +367,7 @@ export default {
       this.cardsChosenId = [];
       this.cardsWon = [];
       // console.log(this.$refs.img);
-      if(this.$refs.img) {
+      if (this.$refs.img) {
         this.$refs.img.forEach((comp) => {
           comp.$el.classList.remove('faded');
           comp.$el.classList.remove('flipped');
