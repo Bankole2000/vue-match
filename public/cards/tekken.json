@@ -1,52 +1,52 @@
 {
   "default": [
     {
-      "img": "images/tekken/bg/1.png"
+      "img": "images/tekken/bg/1.png.webp"
     },
     {
-      "img": "images/tekken/bg/2.png"
+      "img": "images/tekken/bg/2.png.webp"
     },
     {
-      "img": "images/tekken/bg/3.png"
+      "img": "images/tekken/bg/3.png.webp"
     },
     {
-      "img": "images/tekken/bg/4.png"
+      "img": "images/tekken/bg/4.png.webp"
     },
     {
-      "img": "images/tekken/bg/5.png"
+      "img": "images/tekken/bg/5.png.webp"
     },
     {
-      "img": "images/tekken/bg/6.png"
+      "img": "images/tekken/bg/6.png.webp"
     },
     {
-      "img": "images/tekken/bg/7.png"
+      "img": "images/tekken/bg/7.png.webp"
     },
     {
-      "img": "images/tekken/bg/8.png"
+      "img": "images/tekken/bg/8.png.webp"
     },
     {
-      "img": "images/tekken/bg/9.png"
+      "img": "images/tekken/bg/9.png.webp"
     },
     {
-      "img": "images/tekken/bg/10.png"
+      "img": "images/tekken/bg/10.png.webp"
     },
     {
-      "img": "images/tekken/bg/11.png"
+      "img": "images/tekken/bg/11.png.webp"
     },
     {
-      "img": "images/tekken/bg/12.png"
+      "img": "images/tekken/bg/12.png.webp"
     },
     {
-      "img": "images/tekken/bg/13.png"
+      "img": "images/tekken/bg/13.png.webp"
     },
     {
-      "img": "images/tekken/bg/14.png"
+      "img": "images/tekken/bg/14.png.webp"
     },
     {
-      "img": "images/tekken/bg/15.png"
+      "img": "images/tekken/bg/15.png.webp"
     },
     {
-      "img": "images/tekken/bg/16.png"
+      "img": "images/tekken/bg/16.png.webp"
     }
   ],
   "audio": {
@@ -56,35 +56,35 @@
   "cards": [
     {
       "name": "Paul Phoenix",
-      "img": "images/tekken/main/1.png"
+      "img": "images/tekken/main/1.png.webp"
     },
     {
       "name": "Eddy Gordo",
-      "img": "images/tekken/main/2.png"
+      "img": "images/tekken/main/2.png.webp"
     },
     {
       "name": "Heihachi",
-      "img": "images/tekken/main/3.png"
+      "img": "images/tekken/main/3.png.webp"
     },
     {
       "name": "Hwoarang",
-      "img": "images/tekken/main/4.png"
+      "img": "images/tekken/main/4.png.webp"
     },
     {
       "name": "Jin Kazama",
-      "img": "images/tekken/main/5.png"
+      "img": "images/tekken/main/5.png.webp"
     },
     {
       "name": "Kazuya",
-      "img": "images/tekken/main/6.png"
+      "img": "images/tekken/main/6.png.webp"
     },
     {
       "name": "Lei Wu Long",
-      "img": "images/tekken/main/7.png"
+      "img": "images/tekken/main/7.png.webp"
     },
     {
       "name": "Xiaoyu",
-      "img": "images/tekken/main/8.png"
+      "img": "images/tekken/main/8.png.webp"
     }
   ]
 }

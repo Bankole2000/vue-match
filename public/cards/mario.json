@@ -1,52 +1,52 @@
 {
   "default": [
     {
-      "img": "images/mario/bg/1.png"
+      "img": "images/mario/bg/1.png.webp"
     },
     {
-      "img": "images/mario/bg/2.png"
+      "img": "images/mario/bg/2.png.webp"
     },
     {
-      "img": "images/mario/bg/3.png"
+      "img": "images/mario/bg/3.png.webp"
     },
     {
-      "img": "images/mario/bg/4.png"
+      "img": "images/mario/bg/4.png.webp"
     },
     {
-      "img": "images/mario/bg/5.png"
+      "img": "images/mario/bg/5.png.webp"
     },
     {
-      "img": "images/mario/bg/6.png"
+      "img": "images/mario/bg/6.png.webp"
     },
     {
-      "img": "images/mario/bg/7.png"
+      "img": "images/mario/bg/7.png.webp"
     },
     {
-      "img": "images/mario/bg/8.png"
+      "img": "images/mario/bg/8.png.webp"
     },
     {
-      "img": "images/mario/bg/9.png"
+      "img": "images/mario/bg/9.png.webp"
     },
     {
-      "img": "images/mario/bg/10.png"
+      "img": "images/mario/bg/10.png.webp"
     },
     {
-      "img": "images/mario/bg/11.png"
+      "img": "images/mario/bg/11.png.webp"
     },
     {
-      "img": "images/mario/bg/12.png"
+      "img": "images/mario/bg/12.png.webp"
     },
     {
-      "img": "images/mario/bg/13.png"
+      "img": "images/mario/bg/13.png.webp"
     },
     {
-      "img": "images/mario/bg/14.png"
+      "img": "images/mario/bg/14.png.webp"
     },
     {
-      "img": "images/mario/bg/15.png"
+      "img": "images/mario/bg/15.png.webp"
     },
     {
-      "img": "images/mario/bg/16.png"
+      "img": "images/mario/bg/16.png.webp"
     }
   ],
   "audio": {
@@ -57,35 +57,35 @@
   "cards": [
     {
       "name": "Mario",
-      "img": "images/mario/main/1.png"
+      "img": "images/mario/main/1.png.webp"
     },
     {
       "name": "Luigi",
-      "img": "images/mario/main/2.png"
+      "img": "images/mario/main/2.png.webp"
     },
     {
       "name": "Princess",
-      "img": "images/mario/main/3.png"
+      "img": "images/mario/main/3.png.webp"
     },
     {
       "name": "Bowser",
-      "img": "images/mario/main/4.png"
+      "img": "images/mario/main/4.png.webp"
     },
     {
       "name": "Toadstool",
-      "img": "images/mario/main/5.png"
+      "img": "images/mario/main/5.png.webp"
     },
     {
       "name": "vincent",
-      "img": "images/mario/main/6.png"
+      "img": "images/mario/main/6.png.webp"
     },
     {
       "name": "1up mushroom",
-      "img": "images/mario/main/7.png"
+      "img": "images/mario/main/7.png.webp"
     },
     {
       "name": "Star",
-      "img": "images/mario/main/8.png"
+      "img": "images/mario/main/8.png.webp"
     }
   ]
 }

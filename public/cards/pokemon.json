@@ -1,52 +1,52 @@
 {
   "default": [
     {
-      "img": "images/pokemon/bg/1.png"
+      "img": "images/pokemon/bg/1.png.webp"
     },
     {
-      "img": "images/pokemon/bg/2.png"
+      "img": "images/pokemon/bg/2.png.webp"
     },
     {
-      "img": "images/pokemon/bg/3.png"
+      "img": "images/pokemon/bg/3.png.webp"
     },
     {
-      "img": "images/pokemon/bg/4.png"
+      "img": "images/pokemon/bg/4.png.webp"
     },
     {
-      "img": "images/pokemon/bg/5.png"
+      "img": "images/pokemon/bg/5.png.webp"
     },
     {
-      "img": "images/pokemon/bg/6.png"
+      "img": "images/pokemon/bg/6.png.webp"
     },
     {
-      "img": "images/pokemon/bg/7.png"
+      "img": "images/pokemon/bg/7.png.webp"
     },
     {
-      "img": "images/pokemon/bg/8.png"
+      "img": "images/pokemon/bg/8.png.webp"
     },
     {
-      "img": "images/pokemon/bg/9.png"
+      "img": "images/pokemon/bg/9.png.webp"
     },
     {
-      "img": "images/pokemon/bg/10.png"
+      "img": "images/pokemon/bg/10.png.webp"
     },
     {
-      "img": "images/pokemon/bg/11.png"
+      "img": "images/pokemon/bg/11.png.webp"
     },
     {
-      "img": "images/pokemon/bg/12.png"
+      "img": "images/pokemon/bg/12.png.webp"
     },
     {
-      "img": "images/pokemon/bg/13.png"
+      "img": "images/pokemon/bg/13.png.webp"
     },
     {
-      "img": "images/pokemon/bg/14.png"
+      "img": "images/pokemon/bg/14.png.webp"
     },
     {
-      "img": "images/pokemon/bg/15.png"
+      "img": "images/pokemon/bg/15.png.webp"
     },
     {
-      "img": "images/pokemon/bg/16.png"
+      "img": "images/pokemon/bg/16.png.webp"
     }
   ],
   "audio": {
@@ -57,35 +57,35 @@
   "cards": [
     {
       "name": "Pikachu",
-      "img": "images/pokemon/main/1.png"
+      "img": "images/pokemon/main/1.png.webp"
     },
     {
       "name": "Charmander",
-      "img": "images/pokemon/main/2.png"
+      "img": "images/pokemon/main/2.png.webp"
     },
     {
       "name": "Bulbasaur",
-      "img": "images/pokemon/main/3.png"
+      "img": "images/pokemon/main/3.png.webp"
     },
     {
       "name": "Squirtle",
-      "img": "images/pokemon/main/4.png"
+      "img": "images/pokemon/main/4.png.webp"
     },
     {
       "name": "Pidgey",
-      "img": "images/pokemon/main/5.png"
+      "img": "images/pokemon/main/5.png.webp"
     },
     {
       "name": "Starmie",
-      "img": "images/pokemon/main/6.png"
+      "img": "images/pokemon/main/6.png.webp"
     },
     {
       "name": "Vulpix",
-      "img": "images/pokemon/main/7.png"
+      "img": "images/pokemon/main/7.png.webp"
     },
     {
       "name": "MewTwo",
-      "img": "images/pokemon/main/8.png"
+      "img": "images/pokemon/main/8.png.webp"
     }
   ]
 }

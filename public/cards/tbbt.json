@@ -1,52 +1,52 @@
 {
   "default": [
     {
-      "img": "images/tbbt/bg/1.png"
+      "img": "images/tbbt/bg/1.png.webp"
     },
     {
-      "img": "images/tbbt/bg/2.png"
+      "img": "images/tbbt/bg/2.png.webp"
     },
     {
-      "img": "images/tbbt/bg/3.png"
+      "img": "images/tbbt/bg/3.png.webp"
     },
     {
-      "img": "images/tbbt/bg/4.png"
+      "img": "images/tbbt/bg/4.png.webp"
     },
     {
-      "img": "images/tbbt/bg/5.png"
+      "img": "images/tbbt/bg/5.png.webp"
     },
     {
-      "img": "images/tbbt/bg/6.png"
+      "img": "images/tbbt/bg/6.png.webp"
     },
     {
-      "img": "images/tbbt/bg/7.png"
+      "img": "images/tbbt/bg/7.png.webp"
     },
     {
-      "img": "images/tbbt/bg/8.png"
+      "img": "images/tbbt/bg/8.png.webp"
     },
     {
-      "img": "images/tbbt/bg/9.png"
+      "img": "images/tbbt/bg/9.png.webp"
     },
     {
-      "img": "images/tbbt/bg/10.png"
+      "img": "images/tbbt/bg/10.png.webp"
     },
     {
-      "img": "images/tbbt/bg/11.png"
+      "img": "images/tbbt/bg/11.png.webp"
     },
     {
-      "img": "images/tbbt/bg/12.png"
+      "img": "images/tbbt/bg/12.png.webp"
     },
     {
-      "img": "images/tbbt/bg/13.png"
+      "img": "images/tbbt/bg/13.png.webp"
     },
     {
-      "img": "images/tbbt/bg/14.png"
+      "img": "images/tbbt/bg/14.png.webp"
     },
     {
-      "img": "images/tbbt/bg/15.png"
+      "img": "images/tbbt/bg/15.png.webp"
     },
     {
-      "img": "images/tbbt/bg/16.png"
+      "img": "images/tbbt/bg/16.png.webp"
     }
   ],
   "audio": {
@@ -56,35 +56,35 @@
   "cards": [
     {
       "name": "Cloud",
-      "img": "images/tbbt/main/1.png"
+      "img": "images/tbbt/main/1.png.webp"
     },
     {
       "name": "Tifa",
-      "img": "images/tbbt/main/2.png"
+      "img": "images/tbbt/main/2.png.webp"
     },
     {
       "name": "Aerith",
-      "img": "images/tbbt/main/3.png"
+      "img": "images/tbbt/main/3.png.webp"
     },
     {
       "name": "Barret",
-      "img": "images/tbbt/main/4.png"
+      "img": "images/tbbt/main/4.png.webp"
     },
     {
       "name": "Sephiroth",
-      "img": "images/tbbt/main/5.png"
+      "img": "images/tbbt/main/5.png.webp"
     },
     {
       "name": "Vincent",
-      "img": "images/tbbt/main/6.png"
+      "img": "images/tbbt/main/6.png.webp"
     },
     {
       "name": "Zack",
-      "img": "images/tbbt/main/7.png"
+      "img": "images/tbbt/main/7.png.webp"
     },
     {
       "name": "Rufus",
-      "img": "images/tbbt/main/8.png"
+      "img": "images/tbbt/main/8.png.webp"
     }
   ]
 }

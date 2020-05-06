@@ -1,52 +1,52 @@
 {
   "default": [
     {
-      "img": "images/friends/bg/1.png"
+      "img": "images/friends/bg/1.png.webp"
     },
     {
-      "img": "images/friends/bg/2.png"
+      "img": "images/friends/bg/2.png.webp"
     },
     {
-      "img": "images/friends/bg/3.png"
+      "img": "images/friends/bg/3.png.webp"
     },
     {
-      "img": "images/friends/bg/4.png"
+      "img": "images/friends/bg/4.png.webp"
     },
     {
-      "img": "images/friends/bg/5.png"
+      "img": "images/friends/bg/5.png.webp"
     },
     {
-      "img": "images/friends/bg/6.png"
+      "img": "images/friends/bg/6.png.webp"
     },
     {
-      "img": "images/friends/bg/7.png"
+      "img": "images/friends/bg/7.png.webp"
     },
     {
-      "img": "images/friends/bg/8.png"
+      "img": "images/friends/bg/8.png.webp"
     },
     {
-      "img": "images/friends/bg/9.png"
+      "img": "images/friends/bg/9.png.webp"
     },
     {
-      "img": "images/friends/bg/10.png"
+      "img": "images/friends/bg/10.png.webp"
     },
     {
-      "img": "images/friends/bg/11.png"
+      "img": "images/friends/bg/11.png.webp"
     },
     {
-      "img": "images/friends/bg/12.png"
+      "img": "images/friends/bg/12.png.webp"
     },
     {
-      "img": "images/friends/bg/13.png"
+      "img": "images/friends/bg/13.png.webp"
     },
     {
-      "img": "images/friends/bg/14.png"
+      "img": "images/friends/bg/14.png.webp"
     },
     {
-      "img": "images/friends/bg/15.png"
+      "img": "images/friends/bg/15.png.webp"
     },
     {
-      "img": "images/friends/bg/16.png"
+      "img": "images/friends/bg/16.png.webp"
     }
   ],
   "audio": {
@@ -56,35 +56,35 @@
   "cards": [
     {
       "name": "Gunther",
-      "img": "images/friends/main/1.png"
+      "img": "images/friends/main/1.png.webp"
     },
     {
       "name": "Chandler",
-      "img": "images/friends/main/2.png"
+      "img": "images/friends/main/2.png.webp"
     },
     {
       "name": "Joey",
-      "img": "images/friends/main/3.png"
+      "img": "images/friends/main/3.png.webp"
     },
     {
       "name": "Monica",
-      "img": "images/friends/main/4.png"
+      "img": "images/friends/main/4.png.webp"
     },
     {
       "name": "Janice",
-      "img": "images/friends/main/5.png"
+      "img": "images/friends/main/5.png.webp"
     },
     {
       "name": "Phoebie",
-      "img": "images/friends/main/6.png"
+      "img": "images/friends/main/6.png.webp"
     },
     {
       "name": "Rachel",
-      "img": "images/friends/main/7.png"
+      "img": "images/friends/main/7.png.webp"
     },
     {
       "name": "Ross",
-      "img": "images/friends/main/8.png"
+      "img": "images/friends/main/8.png.webp"
     }
   ]
 }

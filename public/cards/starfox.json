@@ -1,52 +1,52 @@
 {
   "default": [
     {
-      "img": "images/starfox/bg/1.png"
+      "img": "images/starfox/bg/1.png.webp"
     },
     {
-      "img": "images/starfox/bg/2.png"
+      "img": "images/starfox/bg/2.png.webp"
     },
     {
-      "img": "images/starfox/bg/3.png"
+      "img": "images/starfox/bg/3.png.webp"
     },
     {
-      "img": "images/starfox/bg/4.png"
+      "img": "images/starfox/bg/4.png.webp"
     },
     {
-      "img": "images/starfox/bg/5.png"
+      "img": "images/starfox/bg/5.png.webp"
     },
     {
-      "img": "images/starfox/bg/6.png"
+      "img": "images/starfox/bg/6.png.webp"
     },
     {
-      "img": "images/starfox/bg/7.png"
+      "img": "images/starfox/bg/7.png.webp"
     },
     {
-      "img": "images/starfox/bg/8.png"
+      "img": "images/starfox/bg/8.png.webp"
     },
     {
-      "img": "images/starfox/bg/9.png"
+      "img": "images/starfox/bg/9.png.webp"
     },
     {
-      "img": "images/starfox/bg/10.png"
+      "img": "images/starfox/bg/10.png.webp"
     },
     {
-      "img": "images/starfox/bg/11.png"
+      "img": "images/starfox/bg/11.png.webp"
     },
     {
-      "img": "images/starfox/bg/12.png"
+      "img": "images/starfox/bg/12.png.webp"
     },
     {
-      "img": "images/starfox/bg/13.png"
+      "img": "images/starfox/bg/13.png.webp"
     },
     {
-      "img": "images/starfox/bg/14.png"
+      "img": "images/starfox/bg/14.png.webp"
     },
     {
-      "img": "images/starfox/bg/15.png"
+      "img": "images/starfox/bg/15.png.webp"
     },
     {
-      "img": "images/starfox/bg/16.png"
+      "img": "images/starfox/bg/16.png.webp"
     }
   ],
   "audio": {
@@ -57,35 +57,35 @@
   "cards": [
     {
       "name": "Fox McCloud",
-      "img": "images/starfox/main/1.png"
+      "img": "images/starfox/main/1.png.webp"
     },
     {
       "name": "Andross",
-      "img": "images/starfox/main/2.png"
+      "img": "images/starfox/main/2.png.webp"
     },
     {
       "name": "Falco Lombardi",
-      "img": "images/starfox/main/3.png"
+      "img": "images/starfox/main/3.png.webp"
     },
     {
       "name": "Peppy",
-      "img": "images/starfox/main/4.png"
+      "img": "images/starfox/main/4.png.webp"
     },
     {
       "name": "Slippy Toad",
-      "img": "images/starfox/main/5.png"
+      "img": "images/starfox/main/5.png.webp"
     },
     {
       "name": "StarWolf",
-      "img": "images/starfox/main/6.png"
+      "img": "images/starfox/main/6.png.webp"
     },
     {
       "name": "General Pepper",
-      "img": "images/starfox/main/7.png"
+      "img": "images/starfox/main/7.png.webp"
     },
     {
       "name": "Kat",
-      "img": "images/starfox/main/8.png"
+      "img": "images/starfox/main/8.png.webp"
     }
   ]
 }

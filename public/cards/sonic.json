@@ -1,52 +1,52 @@
 {
   "default": [
     {
-      "img": "images/sonic/bg/1.png"
+      "img": "images/sonic/bg/1.png.webp"
     },
     {
-      "img": "images/sonic/bg/2.png"
+      "img": "images/sonic/bg/2.png.webp"
     },
     {
-      "img": "images/sonic/bg/3.png"
+      "img": "images/sonic/bg/3.png.webp"
     },
     {
-      "img": "images/sonic/bg/4.png"
+      "img": "images/sonic/bg/4.png.webp"
     },
     {
-      "img": "images/sonic/bg/5.png"
+      "img": "images/sonic/bg/5.png.webp"
     },
     {
-      "img": "images/sonic/bg/6.png"
+      "img": "images/sonic/bg/6.png.webp"
     },
     {
-      "img": "images/sonic/bg/7.png"
+      "img": "images/sonic/bg/7.png.webp"
     },
     {
-      "img": "images/sonic/bg/8.png"
+      "img": "images/sonic/bg/8.png.webp"
     },
     {
-      "img": "images/sonic/bg/9.png"
+      "img": "images/sonic/bg/9.png.webp"
     },
     {
-      "img": "images/sonic/bg/10.png"
+      "img": "images/sonic/bg/10.png.webp"
     },
     {
-      "img": "images/sonic/bg/11.png"
+      "img": "images/sonic/bg/11.png.webp"
     },
     {
-      "img": "images/sonic/bg/12.png"
+      "img": "images/sonic/bg/12.png.webp"
     },
     {
-      "img": "images/sonic/bg/13.png"
+      "img": "images/sonic/bg/13.png.webp"
     },
     {
-      "img": "images/sonic/bg/14.png"
+      "img": "images/sonic/bg/14.png.webp"
     },
     {
-      "img": "images/sonic/bg/15.png"
+      "img": "images/sonic/bg/15.png.webp"
     },
     {
-      "img": "images/sonic/bg/16.png"
+      "img": "images/sonic/bg/16.png.webp"
     }
   ],
   "audio": {
@@ -56,35 +56,35 @@
   "cards": [
     {
       "name": "Amy Rose",
-      "img": "images/sonic/main/1.png"
+      "img": "images/sonic/main/1.png.webp"
     },
     {
       "name": "Sonic",
-      "img": "images/sonic/main/2.png"
+      "img": "images/sonic/main/2.png.webp"
     },
     {
       "name": "Knuckles",
-      "img": "images/sonic/main/3.png"
+      "img": "images/sonic/main/3.png.webp"
     },
     {
       "name": "Dr Robotnik",
-      "img": "images/sonic/main/4.png"
+      "img": "images/sonic/main/4.png.webp"
     },
     {
       "name": "Shadow",
-      "img": "images/sonic/main/5.png"
+      "img": "images/sonic/main/5.png.webp"
     },
     {
       "name": "Silver",
-      "img": "images/sonic/main/6.png"
+      "img": "images/sonic/main/6.png.webp"
     },
     {
       "name": "Tails",
-      "img": "images/sonic/main/7.png"
+      "img": "images/sonic/main/7.png.webp"
     },
     {
       "name": "Tikal",
-      "img": "images/sonic/main/8.png"
+      "img": "images/sonic/main/8.png.webp"
     }
   ]
 }

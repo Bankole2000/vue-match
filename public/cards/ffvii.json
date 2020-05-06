@@ -1,52 +1,52 @@
 {
   "default": [
     {
-      "img": "images/ffvii/bg/1.png"
+      "img": "images/ffvii/bg/1.png.webp"
     },
     {
-      "img": "images/ffvii/bg/2.png"
+      "img": "images/ffvii/bg/2.png.webp"
     },
     {
-      "img": "images/ffvii/bg/3.png"
+      "img": "images/ffvii/bg/3.png.webp"
     },
     {
-      "img": "images/ffvii/bg/4.png"
+      "img": "images/ffvii/bg/4.png.webp"
     },
     {
-      "img": "images/ffvii/bg/5.png"
+      "img": "images/ffvii/bg/5.png.webp"
     },
     {
-      "img": "images/ffvii/bg/6.png"
+      "img": "images/ffvii/bg/6.png.webp"
     },
     {
-      "img": "images/ffvii/bg/7.png"
+      "img": "images/ffvii/bg/7.png.webp"
     },
     {
-      "img": "images/ffvii/bg/8.png"
+      "img": "images/ffvii/bg/8.png.webp"
     },
     {
-      "img": "images/ffvii/bg/9.png"
+      "img": "images/ffvii/bg/9.png.webp"
     },
     {
-      "img": "images/ffvii/bg/10.png"
+      "img": "images/ffvii/bg/10.png.webp"
     },
     {
-      "img": "images/ffvii/bg/11.png"
+      "img": "images/ffvii/bg/11.png.webp"
     },
     {
-      "img": "images/ffvii/bg/12.png"
+      "img": "images/ffvii/bg/12.png.webp"
     },
     {
-      "img": "images/ffvii/bg/13.png"
+      "img": "images/ffvii/bg/13.png.webp"
     },
     {
-      "img": "images/ffvii/bg/14.png"
+      "img": "images/ffvii/bg/14.png.webp"
     },
     {
-      "img": "images/ffvii/bg/15.png"
+      "img": "images/ffvii/bg/15.png.webp"
     },
     {
-      "img": "images/ffvii/bg/16.png"
+      "img": "images/ffvii/bg/16.png.webp"
     }
   ],
   "audio": {
@@ -56,35 +56,35 @@
   "cards": [
     {
       "name": "Cloud",
-      "img": "images/ffvii/main/1.png"
+      "img": "images/ffvii/main/1.png.webp"
     },
     {
       "name": "Tifa",
-      "img": "images/ffvii/main/2.png"
+      "img": "images/ffvii/main/2.png.webp"
     },
     {
       "name": "Aerith",
-      "img": "images/ffvii/main/3.png"
+      "img": "images/ffvii/main/3.png.webp"
     },
     {
       "name": "Barret",
-      "img": "images/ffvii/main/4.png"
+      "img": "images/ffvii/main/4.png.webp"
     },
     {
       "name": "Sephiroth",
-      "img": "images/ffvii/main/5.png"
+      "img": "images/ffvii/main/5.png.webp"
     },
     {
       "name": "Vincent",
-      "img": "images/ffvii/main/6.png"
+      "img": "images/ffvii/main/6.png.webp"
     },
     {
       "name": "Zack",
-      "img": "images/ffvii/main/7.png"
+      "img": "images/ffvii/main/7.png.webp"
     },
     {
       "name": "Rufus",
-      "img": "images/ffvii/main/8.png"
+      "img": "images/ffvii/main/8.png.webp"
     }
   ]
 }
