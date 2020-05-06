@@ -39,6 +39,13 @@
             </v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
+        <v-list-item two-line="">
+          <v-list-item-content>
+            <v-list-item-subtitle>
+              You have 10 lives 💖 and 60 seconds ⏱
+            </v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
 
         <v-card-actions>
 

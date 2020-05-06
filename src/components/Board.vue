@@ -4,7 +4,7 @@
       <v-container>
         <v-layout class="d-flex wrap justify-center">
           <h1 class="display-1 grey--text text--darken-3 mt-4 ml-4 font-weight-thin">
-            <span class="primary--text font-weight-regular">Score</span>
+            <span class="primary--text font-weight-regular">Matches</span>
             : <span :class="{'success--text font-weight-bold': gameWon,
             'error--text font-weight-bold': gameLost }">{{ cardsWon.length }}</span>
           </h1>
@@ -15,7 +15,8 @@
               <h1 class="display-1 grey--text text--darken-3 mt-4 ml-4 font-weight-thin"
               style="text-align: center;">
                 <span class="primary--text font-weight-regular">Time Left:</span>
-                <span :class="{'success--text font-weight-bold': gameWon }">
+                <span :class="{'success--text font-weight-bold': gameWon,
+                'error--text font-weight-bold': gameLost }">
                   {{ `${timeObj.m}:${timeObj.s}` }}
                   </span></h1>
             </template>
@@ -64,6 +65,10 @@
           </v-row>
           <div v-if="gameComplete" class="d-flex justify-center py-0">
             <h3>🎮 Try Selecting a different theme 👆</h3>
+          </div>
+          <div class="d-flex justify-center py-0" v-if='!gameComplete'>
+            <strong>Life:</strong>
+            <v-icon v-for="(i, index) in score" :key="index" class="error--text">mdi-heart</v-icon>
           </div>
         </v-container>
       </v-container>
@@ -123,6 +128,8 @@
       <audio autoplay loop controls ref="themeMusic" :src="themeOst"></audio>
     </div>
     <WelcomeModal :welcome='welcome' @startGame='startNewGame' />
+    <Score :openWon='openWon' @startGame='startNewGame' :lives='score'
+    :matches='cardsWon.length' :timeLeft='timeLeft' />
   </div>
 </template>
 
@@ -130,6 +137,7 @@
 import Snackbar from '@/components/Snackbar.vue';
 import Loader from '@/components/Loader.vue';
 import WelcomeModal from '@/components/WelcomeModal.vue';
+import Score from '@/components/Score.vue';
 
 export default {
   name: 'Board',
@@ -137,16 +145,20 @@ export default {
     Snackbar,
     Loader,
     WelcomeModal,
+    Score,
   },
   data() {
     return {
       theme: 'got',
       themeOst: 'audio/got.webm',
       loadingTime: 3000,
+      timeLeft: 60,
+      score: 10,
       canPlay: true,
       welcome: true,
       gameWon: false,
       gameLost: false,
+      openWon: false,
       themes: [
         {
           text: 'Family Guy',
@@ -288,6 +300,9 @@ export default {
     startNewGame() {
       this.welcome = false;
       this.loading = true;
+      this.score = 10;
+      this.openWon = false;
+      this.timeLeft = 60;
       this.game = {
         cards: [],
         default: {},
@@ -317,6 +332,8 @@ export default {
         });
     },
     checkForMatch(cards, ids) {
+      // console.log(this.$refs.vac2.endTime - (new Date().getTime()));
+      console.log(this.$refs.vac2.actualEndTime - (new Date().getTime()));
       if (cards[0] === cards[1]) {
         this.$refs.success.volume = 0.5;
         this.$refs.success.play();
@@ -338,7 +355,11 @@ export default {
           this.gameComplete = true;
           this.gameWon = true;
           this.canPlay = false;
+          const rightNow = new Date().getTime();
+          this.timeLeft = this.$refs.vac2.actualEndTime - rightNow;
+          console.log(this.timeLeft, typeof (this.timeLeft));
           this.$refs.vac2.stopCountdown(true);
+          this.openWon = true;
           this.$refs.victory.volume = 0.3;
           this.$refs.victory.play();
         }
@@ -352,6 +373,11 @@ export default {
       this.snackbar.text = 'Not Matched';
       this.snackbar.sclass = 'error';
       this.snackbar.timeout = 500;
+      this.score -= 1;
+      if (this.score === 0) {
+        this.endGame();
+        this.$refs.vac2.stopCountdown(true);
+      }
       setTimeout(() => {
         this.snackbar.snackbar = false;
         this.$refs.img[ids[0]].$el.classList.remove('flipped');
