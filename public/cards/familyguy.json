@@ -1,52 +1,52 @@
 {
   "default": [
     {
-      "img": "images/familyguy/bg/1.png"
+      "img": "images/familyguy/bg/1.png.webp"
     },
     {
-      "img": "images/familyguy/bg/2.png"
+      "img": "images/familyguy/bg/2.png.webp"
     },
     {
-      "img": "images/familyguy/bg/3.png"
+      "img": "images/familyguy/bg/3.png.webp"
     },
     {
-      "img": "images/familyguy/bg/4.png"
+      "img": "images/familyguy/bg/4.png.webp"
     },
     {
-      "img": "images/familyguy/bg/5.png"
+      "img": "images/familyguy/bg/5.png.webp"
     },
     {
-      "img": "images/familyguy/bg/6.png"
+      "img": "images/familyguy/bg/6.png.webp"
     },
     {
-      "img": "images/familyguy/bg/7.png"
+      "img": "images/familyguy/bg/7.png.webp"
     },
     {
-      "img": "images/familyguy/bg/8.png"
+      "img": "images/familyguy/bg/8.png.webp"
     },
     {
-      "img": "images/familyguy/bg/9.png"
+      "img": "images/familyguy/bg/9.png.webp"
     },
     {
-      "img": "images/familyguy/bg/10.png"
+      "img": "images/familyguy/bg/10.png.webp"
     },
     {
-      "img": "images/familyguy/bg/11.png"
+      "img": "images/familyguy/bg/11.png.webp"
     },
     {
-      "img": "images/familyguy/bg/12.png"
+      "img": "images/familyguy/bg/12.png.webp"
     },
     {
-      "img": "images/familyguy/bg/13.png"
+      "img": "images/familyguy/bg/13.png.webp"
     },
     {
-      "img": "images/familyguy/bg/14.png"
+      "img": "images/familyguy/bg/14.png.webp"
     },
     {
-      "img": "images/familyguy/bg/15.png"
+      "img": "images/familyguy/bg/15.png.webp"
     },
     {
-      "img": "images/familyguy/bg/16.png"
+      "img": "images/familyguy/bg/16.png.webp"
     }
   ],
   "audio": {
@@ -56,35 +56,35 @@
   "cards": [
     {
       "name": "Brian",
-      "img": "images/familyguy/main/1.png"
+      "img": "images/familyguy/main/1.png.webp"
     },
     {
       "name": "Chris",
-      "img": "images/familyguy/main/2.png"
+      "img": "images/familyguy/main/2.png.webp"
     },
     {
       "name": "Quagmire",
-      "img": "images/familyguy/main/3.png"
+      "img": "images/familyguy/main/3.png.webp"
     },
     {
       "name": "Cleaveland",
-      "img": "images/familyguy/main/4.png"
+      "img": "images/familyguy/main/4.png.webp"
     },
     {
       "name": "Lois",
-      "img": "images/familyguy/main/5.png"
+      "img": "images/familyguy/main/5.png.webp"
     },
     {
       "name": "Meg",
-      "img": "images/familyguy/main/6.png"
+      "img": "images/familyguy/main/6.png.webp"
     },
     {
       "name": "Peter",
-      "img": "images/familyguy/main/7.png"
+      "img": "images/familyguy/main/7.png.webp"
     },
     {
       "name": "Stewie",
-      "img": "images/familyguy/main/8.png"
+      "img": "images/familyguy/main/8.png.webp"
     }
   ]
 }
