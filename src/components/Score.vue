@@ -35,13 +35,13 @@
              🎯🎮 Final Score - 🃏 x 💖 x ⏱
             </v-list-item-title>
             <v-divider></v-divider>
-            <h1 class="display-1">{{ (timeLeft/1000) * lives * matches }}</h1>
+            <h1 class="display-1">{{ Math.floor(timeLeft/1000) * lives * matches }}</h1>
           </v-list-item-content>
         </v-list-item>
         <v-divider></v-divider>
         <v-card-actions>
         <v-spacer></v-spacer>
-          <v-btn color="primary"  @click="$emit('startGame')">New Game</v-btn>
+          <v-btn color="primary"  @click="$emit('startRandomGame')">New Game</v-btn>
           <v-btn color="error" @click="openWon = false">Cancel</v-btn>
         </v-card-actions>
       </v-card>

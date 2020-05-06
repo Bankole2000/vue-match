@@ -52,22 +52,22 @@
               </h3>
               <h3 v-if="gameLost">
                 <span class="error--text"
-                  ><v-icon class="error--text">mdi-skull-crossbones</v-icon>
-                  You Lost! 😭😭😭
+                  >💀❌
+                  You Lost!😭
                 </span>
                 <span class="hidden-sm-and-down">
-                  Hey, just try again 🤗
+                  but don't give up🤗
                 </span>
               </h3>
               <v-spacer></v-spacer>
-              <v-btn class="primary" @click="startNewGame">New Game</v-btn>
+              <v-btn class="primary" @click="startNewGame">Play Again</v-btn>
             </v-col>
           </v-row>
           <div v-if="gameComplete" class="d-flex justify-center py-0">
-            <h3>🎮 Try Selecting a different theme 👆</h3>
+            <h3>🎮 Or try selecting a different Theme 👆</h3>
           </div>
           <div class="d-flex justify-center py-0" v-if='!gameComplete'>
-            <strong>Life:</strong>
+            <strong class="primary--text">Life:</strong>
             <v-icon v-for="(i, index) in score" :key="index" class="error--text">mdi-heart</v-icon>
           </div>
         </v-container>
@@ -128,7 +128,7 @@
       <audio autoplay loop controls ref="themeMusic" :src="themeOst"></audio>
     </div>
     <WelcomeModal :welcome='welcome' @startGame='startNewGame' />
-    <Score :openWon='openWon' @startGame='startNewGame' :lives='score'
+    <Score :openWon='openWon' @startRandomGame='startRandomGame' :lives='score'
     :matches='cardsWon.length' :timeLeft='timeLeft' />
   </div>
 </template>
@@ -279,6 +279,11 @@ export default {
       this.$refs.defeat.play();
       const end = Array(16).fill(true);
       this.flipped.splice(0, 16, ...end);
+    },
+    startRandomGame() {
+      const selection = Math.floor((Math.random() * this.themes.length) + 1);
+      this.theme = this.themes[selection].value;
+      this.startNewGame();
     },
     // Audio Stuff
     changeAudio(audio) {

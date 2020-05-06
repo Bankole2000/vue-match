@@ -52,7 +52,7 @@
   "audio": {
     "volume": 0.4,
     "music": "audio/mario.webm",
-    "startPoint": 68
+    "startPoint": 69
   },
   "cards": [
     {
