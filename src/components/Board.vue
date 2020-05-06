@@ -279,7 +279,6 @@ export default {
               this.$refs.themeMusic.currentTime = audio.startPoint;
             }
             this.loading = false;
-            console.log('Autoplay Successful');
             this.$refs.vac2.startCountdown(true);
             this.canPlay = true;
           })
@@ -307,7 +306,6 @@ export default {
           this.game.default = data.default;
           const cardImages = this.cardArray.map((card) => card.img);
           const defaultImages = data.default.map((img) => img);
-          console.log(defaultImages, cardImages);
           this.game.empty = data.empty;
           this.imgsrc = this.game.default[0].img;
           this.flipped = Array(16).fill(false);
@@ -321,11 +319,7 @@ export default {
         });
     },
     checkForMatch(cards, ids) {
-      // console.log(this.$refs.audio.play());
-      console.log(this.$refs.victory);
-
       if (cards[0] === cards[1]) {
-        console.log('matched', ids);
         this.$refs.success.volume = 0.5;
         this.$refs.success.play();
         this.cardsWon.push(cards);
@@ -352,7 +346,6 @@ export default {
         }
         return;
       }
-      console.log('not matched', ids);
       this.$refs.error.volume = 0.5;
       this.$refs.error.play();
       this.cardsChosen = [];
@@ -371,32 +364,24 @@ export default {
       }, this.snackbar.timeout);
     },
     flipCard(i, game, card) {
-      // console.log(i, game, $event);
       this.canPlay = false;
       if (this.cardsChosenId.includes(i) || this.cardsFlipped.includes(i)) {
-        console.log('already chosen card');
         this.canPlay = true;
         return;
       }
       this.cardsChosen.push(card.name);
       this.cardsChosenId.push(i);
-      console.log(this.cardsChosen, this.cardsChosenId);
       this.$refs.img[i].$el.classList.toggle('flipped');
-      // this.$refs.img[i].$options.propsData.src = game.cards[i].img;
-      // arr.$set(index, value)
-      // arr.splice(index, 1, value)
       this.flipped.splice(i, 1, true);
       if (this.cardsChosen.length === 1) {
         this.canPlay = true;
         return;
       }
       if (this.cardsChosen.length === 2) {
-        console.log('chosen 2 cards');
         setTimeout(() => {
           this.checkForMatch(this.cardsChosen, this.cardsChosenId);
         }, 300);
       }
-      // console.log(this.flipped, this.flipped[i], $event);
     },
   },
   created() {
@@ -416,7 +401,6 @@ export default {
             this.$refs.themeMusic.play()
               .then(() => {
                 this.$refs.themeMusic.volume = 0.5;
-                console.log('Autoplay Successful');
               })
               .catch((err) => console.log('AutoPlay Prevented', err));
           }
