@@ -304,8 +304,6 @@ export default {
           this.cardArray = this.game.cards;
           this.cardArray.sort(() => 0.5 - Math.random());
           this.game.default = data.default;
-          const cardImages = this.cardArray.map((card) => card.img);
-          const defaultImages = data.default.map((img) => img);
           this.game.empty = data.empty;
           this.imgsrc = this.game.default[0].img;
           this.flipped = Array(16).fill(false);
