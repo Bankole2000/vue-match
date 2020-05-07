@@ -212,7 +212,7 @@ export default {
         },
         {
           text: 'Naruto Shippuden',
-          value: 'Naruto',
+          value: 'naruto',
         },
         {
           text: 'Pokemon (Normal)',
