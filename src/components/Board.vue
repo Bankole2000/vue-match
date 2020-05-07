@@ -94,7 +94,7 @@
             <v-img
               class="white--text align-end card"
               v-if="flipped[i]"
-              :src="card.img"
+              :src="require(`@/assets/${card.img}`)"
               ref="img"
               rel="preload"
               eager
@@ -109,7 +109,7 @@
             <v-img
               class="white--text align-end card"
               v-if="!flipped[i]"
-              :src="game.default[i].img"
+              :src="require(`@/assets/${game.default[i].img}`)"
               ref="img"
               eager
             >
@@ -125,7 +125,7 @@
     <audio ref="success" src="success.mp3"></audio>
     <audio ref="error" src="error.mp3"></audio>
     <div class="d-flex justify-center pt-5 pb-0">
-      <audio autoplay loop controls ref="themeMusic" :src="themeOst"></audio>
+      <audio autoplay loop controls ref="themeMusic" :src="require(`@/assets/${themeOst}`)"></audio>
     </div>
     <WelcomeModal :welcome='welcome' @startGame='startNewGame' />
     <Score :openWon='openWon' @startRandomGame='startRandomGame' :lives='score'
