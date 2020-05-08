@@ -28,8 +28,14 @@
         </v-layout>
         <v-container>
           <v-row>
-            <v-col class="d-flex justify-center mx-auto py-0" cols="11" sm="11">
+            <v-col class="d-flex justify-center mx-auto py-0" cols="11" sm="11"
+            style="align-items: baseline;">
+              <label for="themeSelect"
+              style="margin-right: 10px;" class="hidden-sm-and-down">
+                Select Game Theme:
+              </label>
               <v-select
+                id="themeSelect"
                 :items="themes"
                 label="Select Game Theme"
                 v-model="theme"
@@ -372,7 +378,6 @@ export default {
       this.cardsChosen = [];
       this.cardsChosenId = [];
       this.cardsWon = [];
-      // console.log(this.$refs.img);
       if (this.$refs.img) {
         this.$refs.img.forEach((comp) => {
           comp.$el.classList.remove('faded');
@@ -384,8 +389,6 @@ export default {
       }, this.loadingTime);
     },
     checkForMatch(cards, ids) {
-      // console.log(this.$refs.vac2.endTime - (new Date().getTime()));
-      console.log(this.$refs.vac2.actualEndTime - (new Date().getTime()));
       if (cards[0] === cards[1]) {
         this.$refs.success.volume = 0.5;
         this.$refs.success.play();
@@ -409,7 +412,6 @@ export default {
           this.canPlay = false;
           const rightNow = new Date().getTime();
           this.timeLeft = this.$refs.vac2.actualEndTime - rightNow;
-          console.log(this.timeLeft, typeof (this.timeLeft));
           this.$refs.vac2.stopCountdown(true);
           this.openWon = true;
           this.$refs.victory.volume = 0.3;
@@ -462,8 +464,6 @@ export default {
   },
   created() {
     // this.loading = true;
-    console.log(this.json[this.theme]);
-
     // fetch(`/cards/${this.theme}.json`)
     // .then((res) => res.json())
     // .then((data) => {

@@ -17,8 +17,11 @@
           icon
           text
         >
-        <a :href="(icon.link)" target="_blank" class="secondary--text text-darken-3">
-          <v-icon size="24px">{{ icon.i }}</v-icon></a>
+          <a :href="(icon.link)" target="_blank" rel="noreferrer"
+        class="secondary--text text-darken-3">
+            <v-icon size="24px">{{ icon.i }}</v-icon>
+            <span style="display: none;">{{ icon.title }}</span>
+          </a>
         </v-btn>
       </v-card-text>
 
@@ -27,20 +30,21 @@
         with <span class="primary--text"><i class="mdi mdi-vuejs"></i> VueJS</span> and
         <span class="primary--text"><i class="mdi mdi-vuetify"></i> Vuetify</span> for practice
         and demonstration purposes.
-        <a href="http://bankole2000.github.io/portfolio" target="_blank">
+        <a href="http://bankole2000.github.io/portfolio" target="_blank" rel="noreferrer">
         <span class="primary--text font-weight-bold">The Developer</span></a> is currently
         available for projects, collaborations, training and/or remote employment.
         Feel free to <a href="tel:+2348069166906">
-          <span class="warning--text"><i class="mdi mdi-phone-in-talk"></i> Call</span></a> or
+          <span class="primary--text"><i class="mdi mdi-phone-in-talk"></i> Call</span></a> or
           <a href="mailto:techybanky@gmail.com">
-          <span class="warning--text"><i class="mdi mdi-email"></i> Send an email</span></a>.
+          <span class="primary--text"><i class="mdi mdi-email"></i> Send an email</span></a>.
       </v-card-text>
 
       <v-divider></v-divider>
 
       <v-card-text class="secondary--text text-darken-5">
         &copy; {{ new Date().getFullYear() }} —
-        <a href="https://bankole2000.github.io/portfolio"><strong>Bankole Esan</strong></a>
+        <a href="https://bankole2000.github.io/portfolio"
+        rel="noreferrer"><strong>Bankole Esan</strong></a>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -53,11 +57,11 @@ export default {
   data() {
     return {
       icons: [
-        { i: 'mdi mdi-facebook', link: 'https://facebook.com/esan.bankole' },
-        { i: 'mdi mdi-twitter', link: 'https://twitter.com/bankolealexesan' },
-        { i: 'mdi mdi-linkedin', link: 'https://www.linkedin.com/in/bankoleesan' },
-        { i: 'mdi mdi-discord', link: 'https://discord.gg/HeAVxtM' },
-        { i: 'mdi mdi-github', link: 'https://github.com/bankole2000' },
+        { i: 'mdi mdi-facebook', link: 'https://facebook.com/esan.bankole', title: 'facebook link' },
+        { i: 'mdi mdi-twitter', link: 'https://twitter.com/bankolealexesan', title: 'twitter link' },
+        { i: 'mdi mdi-linkedin', link: 'https://www.linkedin.com/in/bankoleesan', title: 'linkedIn link' },
+        { i: 'mdi mdi-discord', link: 'https://discord.gg/HeAVxtM', title: 'discord link' },
+        { i: 'mdi mdi-github', link: 'https://github.com/bankole2000', title: 'github link' },
       ],
     };
   },
