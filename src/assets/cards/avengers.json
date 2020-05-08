@@ -1,0 +1,91 @@
+{
+  "default": [
+    {
+      "img": "images/avengers/bg/1.png.webp"
+    },
+    {
+      "img": "images/avengers/bg/2.png.webp"
+    },
+    {
+      "img": "images/avengers/bg/3.png.webp"
+    },
+    {
+      "img": "images/avengers/bg/4.png.webp"
+    },
+    {
+      "img": "images/avengers/bg/5.png.webp"
+    },
+    {
+      "img": "images/avengers/bg/6.png.webp"
+    },
+    {
+      "img": "images/avengers/bg/7.png.webp"
+    },
+    {
+      "img": "images/avengers/bg/8.png.webp"
+    },
+    {
+      "img": "images/avengers/bg/9.png.webp"
+    },
+    {
+      "img": "images/avengers/bg/10.png.webp"
+    },
+    {
+      "img": "images/avengers/bg/11.png.webp"
+    },
+    {
+      "img": "images/avengers/bg/12.png.webp"
+    },
+    {
+      "img": "images/avengers/bg/13.png.webp"
+    },
+    {
+      "img": "images/avengers/bg/14.png.webp"
+    },
+    {
+      "img": "images/avengers/bg/15.png.webp"
+    },
+    {
+      "img": "images/avengers/bg/16.png.webp"
+    }
+  ],
+  "audio": {
+    "volume": 0.5,
+    "music": "audio/avengers.webm",
+    "startPoint": 122
+  },
+  "cards": [
+    {
+      "name": "Black Widow",
+      "img": "images/avengers/main/1.png.webp"
+    },
+    {
+      "name": "Gamora",
+      "img": "images/avengers/main/2.png.webp"
+    },
+    {
+      "name": "The Hulk",
+      "img": "images/avengers/main/3.png.webp"
+    },
+    {
+      "name": "Iron Man",
+      "img": "images/avengers/main/4.png.webp"
+    },
+    {
+      "name": "Thanos",
+      "img": "images/avengers/main/5.png.webp"
+    },
+    {
+      "name": "Thor",
+      "img": "images/avengers/main/6.png.webp"
+    },
+    {
+      "name": "Vision",
+      "img": "images/avengers/main/7.png.webp"
+    },
+    {
+      "name": "Black Panther",
+      "img": "images/avengers/main/8.png.webp"
+    }
+  ]
+}

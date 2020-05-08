@@ -138,6 +138,7 @@ import Snackbar from '@/components/Snackbar.vue';
 import Loader from '@/components/Loader.vue';
 import WelcomeModal from '@/components/WelcomeModal.vue';
 import Score from '@/components/Score.vue';
+import avengers from '@/assets/cards/avengers.json';
 import familyguy from '@/assets/cards/familyguy.json';
 import ffvii from '@/assets/cards/ffvii.json';
 import friends from '@/assets/cards/friends.json';
@@ -165,8 +166,8 @@ export default {
   },
   data() {
     return {
-      theme: 'got',
-      themeOst: 'audio/got.webm',
+      theme: 'avengers',
+      themeOst: 'audio/avengers.webm',
       loadingTime: 3000,
       timeLeft: 60,
       score: 10,
@@ -176,6 +177,7 @@ export default {
       gameLost: false,
       openWon: false,
       json: {
+        avengers,
         familyguy,
         ffvii,
         friends,
@@ -194,6 +196,10 @@ export default {
         zelda,
       },
       themes: [
+        {
+          text: 'Avengers Endgame',
+          value: 'avengers',
+        },
         {
           text: 'Family Guy',
           value: 'familyguy',
