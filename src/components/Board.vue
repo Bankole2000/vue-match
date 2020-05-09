@@ -345,7 +345,7 @@ export default {
             this.$refs.vac2.startCountdown(true);
             this.canPlay = true;
           })
-          .catch((err) => console.log('AutoPlay Prevented', err));
+          .catch((err) => err);
       }
     },
     startNewGame() {

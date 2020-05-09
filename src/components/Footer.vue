@@ -20,7 +20,7 @@
           <a :href="(icon.link)" target="_blank" rel="noreferrer"
         class="secondary--text text-darken-3">
             <v-icon size="24px">{{ icon.i }}</v-icon>
-            <span style="display: none;">{{ icon.title }}</span>
+            <span style="font-size: 0px;">{{ icon.title }}</span>
           </a>
         </v-btn>
       </v-card-text>

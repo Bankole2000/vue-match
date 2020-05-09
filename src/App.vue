@@ -18,6 +18,7 @@
         href="https://github.com/bankole2000/vue-match"
         target="_blank"
         text
+        rel="noreferrer"
       >
         <span class="mr-2">Star On Github</span>
         <v-icon>mdi-github</v-icon>
