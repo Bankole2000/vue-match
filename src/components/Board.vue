@@ -5,33 +5,51 @@
         <v-layout class="d-flex wrap justify-center">
           <h1 class="display-1 grey--text text--darken-3 mt-4 ml-4 font-weight-thin">
             <span class="primary--text font-weight-regular">Matches</span>
-            : <span :class="{'success--text font-weight-bold': gameWon,
-            'error--text font-weight-bold': gameLost }">{{ cardsWon.length }}</span>
+            :
+            <span
+              :class="{
+                'success--text font-weight-bold': gameWon,
+                'error--text font-weight-bold': gameLost
+              }"
+              >{{ cardsWon.length }}</span
+            >
           </h1>
-          <vac :end-time="new Date().getTime() + 60000" :auto-start="false" ref="vac2"
-          @finish="endGame">
-            <template
-              v-slot:process="{ timeObj }">
-              <h1 class="display-1 grey--text text--darken-3 mt-4 ml-4 font-weight-thin"
-              style="text-align: center;">
+          <vac
+            :end-time="new Date().getTime() + 60000"
+            :auto-start="false"
+            ref="vac2"
+            @finish="endGame"
+          >
+            <template v-slot:process="{ timeObj }">
+              <h1
+                class="display-1 grey--text text--darken-3 mt-4 ml-4 font-weight-thin"
+                style="text-align: center;"
+              >
                 <span class="primary--text font-weight-regular">Time Left:</span>
-                <span :class="{'success--text font-weight-bold': gameWon,
-                'error--text font-weight-bold': gameLost }">
+                <span
+                  :class="{
+                    'success--text font-weight-bold': gameWon,
+                    'error--text font-weight-bold': gameLost
+                  }"
+                >
                   {{ `${timeObj.m}:${timeObj.s}` }}
-                  </span></h1>
+                </span>
+              </h1>
             </template>
-            <template
-              v-slot:finish>
+            <template v-slot:finish>
               <h1 class="error--text text--darken-1 mt-4 ml-4 display-1">Time UP!</h1>
             </template>
           </vac>
         </v-layout>
         <v-container>
           <v-row>
-            <v-col class="d-flex justify-center mx-auto py-0" cols="11" sm="11"
-            style="align-items: baseline;">
-              <label for="themeSelect"
-              style="margin-right: 10px;" class="hidden-sm-and-down">
+            <v-col
+              class="d-flex justify-center mx-auto py-0"
+              cols="11"
+              sm="11"
+              style="align-items: baseline;"
+            >
+              <label for="themeSelect" style="margin-right: 10px;" class="hidden-sm-and-down">
                 Select Game Theme:
               </label>
               <v-select
@@ -57,10 +75,7 @@
                 </span>
               </h3>
               <h3 v-if="gameLost">
-                <span class="error--text"
-                  >💀❌
-                  You Lost!😭
-                </span>
+                <span class="error--text">💀❌ You Lost!😭 </span>
                 <span class="hidden-sm-and-down">
                   but don't give up🤗
                 </span>
@@ -72,7 +87,7 @@
           <div v-if="gameComplete" class="d-flex justify-center py-0">
             <h3>🎮 Or try selecting a different Theme 👆</h3>
           </div>
-          <div class="d-flex justify-center py-0" v-if='!gameComplete'>
+          <div class="d-flex justify-center py-0" v-if="!gameComplete">
             <strong class="primary--text">Life:</strong>
             <v-icon v-for="(i, index) in score" :key="index" class="error--text">mdi-heart</v-icon>
           </div>
@@ -93,7 +108,7 @@
             class="mx-auto card"
             v-for="(card, i) in game.cards"
             :key="i"
-            @click="canPlay ? flipCard(i, game, card) : '' "
+            @click="canPlay ? flipCard(i, game, card) : ''"
             :data-id="i"
             :id="i"
           >
@@ -133,9 +148,14 @@
     <div class="d-flex justify-center pt-5 pb-0">
       <audio autoplay loop controls ref="themeMusic" :src="require(`@/assets/${themeOst}`)"></audio>
     </div>
-    <WelcomeModal :welcome='welcome' @startGame='startNewGame' />
-    <Score :openWon='openWon' @startRandomGame='startRandomGame' :lives='score'
-    :matches='cardsWon.length' :timeLeft='timeLeft' />
+    <WelcomeModal :welcome="welcome" @startGame="startNewGame" />
+    <Score
+      :openWon="openWon"
+      @startRandomGame="startRandomGame"
+      :lives="score"
+      :matches="cardsWon.length"
+      :timeLeft="timeLeft"
+    />
   </div>
 </template>
 
@@ -172,8 +192,8 @@ export default {
   },
   data() {
     return {
-      theme: 'avengers',
-      themeOst: 'audio/avengers.webm',
+      theme: 'got',
+      themeOst: 'audio/got.webm',
       loadingTime: 3000,
       timeLeft: 60,
       score: 10,
@@ -327,7 +347,7 @@ export default {
       this.flipped.splice(0, 16, ...end);
     },
     startRandomGame() {
-      const selection = Math.floor((Math.random() * this.themes.length) + 1);
+      const selection = Math.floor(Math.random() * this.themes.length + 1);
       this.theme = this.themes[selection].value;
       this.startNewGame();
     },
@@ -336,7 +356,8 @@ export default {
       this.themeOst = audio.music;
       this.$refs.themeMusic.volume = audio.volume;
       if (this.$refs.themeMusic.play() !== undefined) {
-        this.$refs.themeMusic.play()
+        this.$refs.themeMusic
+          .play()
           .then(() => {
             if (audio.startPoint) {
               this.$refs.themeMusic.currentTime = audio.startPoint;
@@ -474,7 +495,6 @@ export default {
     //   this.imgsrc = this.game.default[0].img;
     //   setTimeout(() => {
     //     // this.loading = false;
-
     //     if (this.$refs.themeMusic.play() !== undefined) {
     //       this.$refs.themeMusic.play()
     //         .then(() => {
