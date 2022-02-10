@@ -55,35 +55,35 @@
   },
   "cards": [
     {
-      "name": "Cloud",
+      "name": "Sheldon & Amy",
       "img": "images/tbbt/main/1.png.webp"
     },
     {
-      "name": "Tifa",
+      "name": "Amy",
       "img": "images/tbbt/main/2.png.webp"
     },
     {
-      "name": "Aerith",
+      "name": "Howard",
       "img": "images/tbbt/main/3.png.webp"
     },
     {
-      "name": "Barret",
+      "name": "Bernadette",
       "img": "images/tbbt/main/4.png.webp"
     },
     {
-      "name": "Sephiroth",
+      "name": "Leonard",
       "img": "images/tbbt/main/5.png.webp"
     },
     {
-      "name": "Vincent",
+      "name": "Penny",
       "img": "images/tbbt/main/6.png.webp"
     },
     {
-      "name": "Zack",
+      "name": "Raj",
       "img": "images/tbbt/main/7.png.webp"
     },
     {
-      "name": "Rufus",
+      "name": "Sheldon",
       "img": "images/tbbt/main/8.png.webp"
     }
   ]
